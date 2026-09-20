@@ -1,0 +1,301 @@
+﻿<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Editor – Article Status Update</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Noto Sans Tamil", Arial, sans-serif;
+    background: #f4f1fb;
+    color: #29213d;
+}
+
+header {
+    background: linear-gradient(135deg, #5b2c83, #167c80);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #5b2c83;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 18px;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+button {
+    margin-top: 25px;
+    width: 100%;
+    padding: 14px;
+    background: #5b2c83;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #462067;
+}
+
+.message {
+    display: none;
+    margin-top: 25px;
+    padding: 18px;
+    border-radius: 8px;
+    line-height: 1.7;
+}
+
+.success {
+    display: block;
+    background: #e8f7ed;
+    color: #176b36;
+    border: 1px solid #a8dfba;
+}
+
+.error {
+    display: block;
+    background: #fdecec;
+    color: #a12626;
+    border: 1px solid #efb1b1;
+}
+
+.note {
+    margin-top: 25px;
+    padding: 18px;
+    background: #f3effa;
+    border-left: 5px solid #5b2c83;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 23px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Editor – Article Status Update</h1>
+    <p>தமிழியல் பரிமாணங்கள்</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Article Status Update</h2>
+
+<label for="articleId">Article ID</label>
+<input type="text" id="articleId" placeholder="Example: DTS-2026-001">
+
+<label for="submissionId">Forminit Submission ID</label>
+<input type="text" id="submissionId" placeholder="Example: sub_xy0yVWEFHrrYMciP">
+
+<label for="articleTitle">Article Title</label>
+<input type="text" id="articleTitle" placeholder="Article title">
+
+<label for="status">Article Status</label>
+
+<select id="status">
+    <option value="Submitted">Submitted</option>
+    <option value="Under Editorial Screening">Under Editorial Screening</option>
+    <option value="Peer Review">Peer Review</option>
+    <option value="Revision Required">Revision Required</option>
+    <option value="Final Editorial Decision">Final Editorial Decision</option>
+    <option value="Accepted">Accepted</option>
+    <option value="Rejected">Rejected</option>
+    <option value="Published">Published</option>
+</select>
+
+<button type="button" id="saveButton">
+    Save Article Status
+</button>
+
+<div id="message" class="message"></div>
+
+<div class="note">
+    <strong>Editor Note:</strong><br>
+    Status updates made here are sent to the journal's Google Sheet
+    and can then be displayed on the Author Article Status page.
+</div>
+
+</div>
+</div>
+
+<footer>
+    தமிழியல் பரிமாணங்கள் – Dimensions of Tamil Studies<br>
+    An International Peer-Reviewed Quarterly E-Journal<br>
+    © 2026 | Pollachi, Tamil Nadu, India
+</footer>
+
+<script>
+
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbwGxRuoZvGndujcsk3ujiV0ky041R9aEnbvhJybECA1UPlo_m74YWbQPscAskQq3xIX8A/exec";
+
+
+document.getElementById("saveButton").addEventListener("click", saveStatus);
+
+
+async function saveStatus() {
+
+    const articleId =
+        document.getElementById("articleId").value.trim();
+
+    const submissionId =
+        document.getElementById("submissionId").value.trim();
+
+    const articleTitle =
+        document.getElementById("articleTitle").value.trim();
+
+    const status =
+        document.getElementById("status").value;
+
+    const message =
+        document.getElementById("message");
+
+
+    if (!articleId || !status) {
+
+        message.className = "message error";
+
+        message.innerHTML =
+            "<strong>Article ID மற்றும் Status அவசியம்.</strong>";
+
+        return;
+    }
+
+
+    message.className = "message";
+
+    message.style.display = "block";
+
+    message.innerHTML =
+        "தயவுசெய்து காத்திருக்கவும்...";
+
+
+    try {
+
+        const formData = new URLSearchParams();
+
+        formData.append("articleId", articleId);
+
+        formData.append("submissionId", submissionId);
+
+        formData.append("articleTitle", articleTitle);
+
+        formData.append("status", status);
+
+
+        const response = await fetch(WEB_APP_URL, {
+
+            method: "POST",
+
+            body: formData
+
+        });
+
+
+        const result = await response.text();
+
+
+        if (result.trim() === "SUCCESS") {
+
+            message.className = "message success";
+
+            message.innerHTML =
+                "<strong>Article Status successfully updated.</strong><br><br>" +
+                "Article ID: " + articleId +
+                "<br>Current Status: " + status;
+
+        }
+
+        else {
+
+            message.className = "message error";
+
+            message.innerHTML =
+                "<strong>Article ID கிடைக்கவில்லை.</strong><br><br>" +
+                "Google Sheet-ல் இந்த Article ID இருக்கிறதா சரிபார்க்கவும்.";
+
+        }
+
+    }
+
+    catch (error) {
+
+        message.className = "message error";
+
+        message.innerHTML =
+            "<strong>Update செய்ய முடியவில்லை.</strong><br><br>" +
+            "Google Web App connection-ஐ சரிபார்க்கவும்.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
