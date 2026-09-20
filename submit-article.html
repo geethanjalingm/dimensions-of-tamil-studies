@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Submit Article | தமிழியல் பரிமாணங்கள்</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil",Arial,sans-serif;
+    background:#f7f4fb;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#5b247a,#1bcedf);
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+header h2{
+    margin:8px 0;
+    font-size:20px;
+}
+
+header p{
+    margin:5px 0;
+    font-size:15px;
+}
+
+nav{
+    background:#3f1763;
+    text-align:center;
+    padding:12px 10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:5px 8px;
+    font-size:14px;
+    display:inline-block;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:900px;
+    margin:35px auto;
+    padding:0 20px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom:25px;
+}
+
+h2{
+    color:#5b247a;
+}
+
+h3{
+    color:#3f1763;
+    margin-top:25px;
+}
+
+.info{
+    background:#f1eafa;
+    border-left:5px solid #5b247a;
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:25px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:18px;
+    margin-bottom:7px;
+    color:#3f1763;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    box-sizing:border-box;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:15px;
+    font-family:inherit;
+}
+
+textarea{
+    min-height:130px;
+    resize:vertical;
+}
+
+input[type="file"]{
+    background:#fafafa;
+}
+
+.checkbox{
+    display:flex;
+    align-items:flex-start;
+    gap:10px;
+    margin-top:22px;
+    font-weight:normal;
+}
+
+.checkbox input{
+    width:auto;
+    margin-top:5px;
+}
+
+button{
+    margin-top:25px;
+    background:#5b247a;
+    color:white;
+    border:none;
+    padding:13px 25px;
+    border-radius:7px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#3f1763;
+}
+
+.note{
+    font-size:14px;
+    color:#666;
+    margin-top:7px;
+}
+
+.back{
+    display:inline-block;
+    margin-top:15px;
+    color:#5b247a;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer{
+    background:#3f1763;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    margin-top:40px;
+    font-size:14px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>தமிழியல் பரிமாணங்கள்</h1>
+
+<h2>Dimensions of Tamil Studies</h2>
+
+<p>An International Peer-Reviewed Quarterly E-Journal</p>
+
+</header>
+
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="aims-scope.html">Aims &amp; Scope</a>
+<a href="editorial-board.html">Editorial Board</a>
+<a href="author-guidelines.html">Author Guidelines</a>
+<a href="peer-review.html">Peer Review</a>
+<a href="ethics.html">Publication Ethics</a>
+<a href="archives.html">Archives</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>ஆய்வுக் கட்டுரை சமர்ப்பிப்பு</h2>
+
+<h3>Submit Article</h3>
+
+<div class="info">
+
+<strong>ஆய்வாளர்களுக்கான அறிவிப்பு:</strong><br><br>
+
+உங்கள் ஆய்வுக் கட்டுரையை கீழே உள்ள ஆன்லைன் சமர்ப்பிப்பு படிவத்தின் மூலம் சமர்ப்பிக்கலாம்.
+
+கட்டுரை <strong>Word (.doc / .docx)</strong> அல்லது
+<strong>PDF (.pdf)</strong> வடிவில் இருக்க வேண்டும்.
+
+கட்டுரையை சமர்ப்பித்த பிறகு, அது முதற்கட்ட ஆசிரியர் பரிசீலனை மற்றும் தேவையான நிலையில் சக மதிப்பாய்வுக்கு அனுப்பப்படும்.
+
+</div>
+
+
+<form id="article-form">
+
+<label for="author">
+ஆசிரியர் பெயர் / Author Name *
+</label>
+
+<input
+type="text"
+id="author"
+name="fi-sender-fullName"
+placeholder="Enter Author Name"
+required
+>
+
+
+<label for="affiliation">
+நிறுவன இணைப்பு / Affiliation *
+</label>
+
+<input
+type="text"
+id="affiliation"
+name="fi-text-affiliation"
+placeholder="College / University / Institution"
+required
+>
+
+
+<label for="email">
+மின்னஞ்சல் / Email *
+</label>
+
+<input
+type="email"
+id="email"
+name="fi-sender-email"
+placeholder="Enter Email Address"
+required
+>
+
+
+<label for="mobile">
+அலைபேசி எண் / Mobile Number
+</label>
+
+<input
+type="tel"
+id="mobile"
+name="fi-text-mobile"
+placeholder="Enter Mobile Number"
+>
+
+
+<label for="title">
+ஆய்வுக் கட்டுரைத் தலைப்பு / Article Title *
+</label>
+
+<input
+type="text"
+id="title"
+name="fi-text-articleTitle"
+placeholder="Enter Article Title"
+required
+>
+
+
+<label for="language">
+கட்டுரையின் மொழி / Article Language *
+</label>
+
+<select
+id="language"
+name="fi-text-language"
+required
+>
+
+<option value="">Select Language</option>
+<option value="Tamil">Tamil</option>
+<option value="English">English</option>
+
+</select>
+
+
+<label for="abstract">
+சுருக்கம் / Abstract *
+</label>
+
+<textarea
+id="abstract"
+name="fi-text-abstract"
+placeholder="Enter your article abstract"
+required
+></textarea>
+
+
+<label for="keywords">
+முக்கியச் சொற்கள் / Keywords *
+</label>
+
+<input
+type="text"
+id="keywords"
+name="fi-text-keywords"
+placeholder="Example: Tamil Literature, Sangam Literature, Feminism"
+required
+>
+
+
+<label for="manuscript">
+ஆய்வுக் கட்டுரை / Manuscript File *
+</label>
+
+<input
+type="file"
+id="manuscript"
+name="fi-file-manuscript"
+accept=".doc,.docx,.pdf"
+required
+>
+
+<p class="note">
+Accepted formats: Word (.doc, .docx) and PDF (.pdf). Maximum total file size: 25 MB.
+</p>
+
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+id="declaration"
+name="fi-text-declaration"
+value="I confirm that this manuscript is original and is not under consideration elsewhere."
+required
+>
+
+<span>
+இந்த ஆய்வுக் கட்டுரை எனது/எங்களது சொந்த ஆய்வு என்பதை உறுதிப்படுத்துகிறேன்.
+இக்கட்டுரை வேறு எந்த இதழிலும் ஒரே நேரத்தில் பரிசீலனையில் இல்லை என்பதையும் உறுதிப்படுத்துகிறேன்.
+</span>
+
+</label>
+
+
+<button type="submit" id="submitButton">
+Submit Manuscript
+</button>
+
+<p id="form-status"></p>
+
+</form>
+
+
+<a class="back" href="index.html">
+← Back to Home
+</a>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p><strong>தமிழியல் பரிமாணங்கள்</strong></p>
+
+<p>Dimensions of Tamil Studies</p>
+
+<p>An International Peer-Reviewed Quarterly E-Journal</p>
+
+<p>© 2026 Dr. T. Geethanjali | Pollachi, Tamil Nadu, India</p>
+
+</footer>
+
+
+<script src="https://forminit.com/sdk/v1/forminit.js"></script>
+
+<script>
+
+const forminit = new Forminit();
+
+const FORM_ID = "f2zwe52b75w";
+
+const form = document.getElementById("article-form");
+
+const status = document.getElementById("form-status");
+
+const button = document.getElementById("submitButton");
+
+
+form.addEventListener("submit", async function(event){
+
+    event.preventDefault();
+
+    status.textContent = "Uploading manuscript... Please wait.";
+    status.style.color = "#5b247a";
+
+    button.disabled = true;
+    button.textContent = "Submitting...";
+
+
+    const formData = new FormData(form);
+
+
+    const { data, redirectUrl, error } =
+        await forminit.submit(FORM_ID, formData);
+
+
+    button.disabled = false;
+    button.textContent = "Submit Manuscript";
+
+
+    if(error){
+
+        status.textContent =
+            "Submission failed: " + error.message;
+
+        status.style.color = "red";
+
+        return;
+    }
+
+
+    status.textContent =
+        "Your manuscript has been submitted successfully.";
+
+    status.style.color = "green";
+
+
+    form.reset();
+
+
+    if(redirectUrl){
+
+        window.location.href = redirectUrl;
+
+    }
+
+});
+
+</script>
+
+
+</body>
+</html>
