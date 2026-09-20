@@ -1,0 +1,308 @@
+﻿```html
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Article Status | தமிழியல் பரிமாணங்கள்</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Noto Sans Tamil", Arial, sans-serif;
+    background: #f5f3fa;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #5b2c83, #008c95);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+nav {
+    background: #321653;
+    text-align: center;
+    padding: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #5b2c83;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    background: #5b2c83;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 7px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #432064;
+}
+
+.result {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.success {
+    background: #eef9f3;
+    border-left: 5px solid #198754;
+}
+
+.error {
+    background: #fff0f0;
+    border-left: 5px solid #dc3545;
+}
+
+.status {
+    font-size: 22px;
+    font-weight: bold;
+    color: #5b2c83;
+    margin-top: 8px;
+}
+
+.info {
+    margin: 8px 0;
+}
+
+.note {
+    margin-top: 25px;
+    padding: 15px;
+    background: #f4f0fa;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+footer {
+    margin-top: 50px;
+    background: #321653;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>தமிழியல் பரிமாணங்கள்</h1>
+    <p>Dimensions of Tamil Studies</p>
+    <p>An International Peer-Reviewed Quarterly E-Journal</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="submission-process.html">Submission Process</a>
+    <a href="author-guidelines.html">Author Guidelines</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>ஆய்வுக் கட்டுரை நிலை</h2>
+
+        <p>
+            உங்கள் ஆய்வுக் கட்டுரையின் தற்போதைய நிலையை
+            Article ID மூலம் அறிந்து கொள்ளலாம்.
+        </p>
+
+        <label for="articleId">Article ID</label>
+
+        <input
+            type="text"
+            id="articleId"
+            placeholder="உதாரணம்: DTS-2026-001"
+        >
+
+        <button type="button" onclick="checkStatus()">
+            Check Article Status
+        </button>
+
+        <div id="result" class="result"></div>
+
+        <div class="note">
+            <strong>குறிப்பு:</strong><br>
+            காட்டப்படும் நிலை ஆசிரியர் பரிசீலனை,
+            சக மதிப்பாய்வு மற்றும் இறுதி ஆசிரியர் முடிவு
+            போன்ற நடைமுறைகளின் அடிப்படையில் மாறலாம்.
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <div>தமிழியல் பரிமாணங்கள்</div>
+    <div>Dimensions of Tamil Studies</div>
+    <div>An International Peer-Reviewed Quarterly E-Journal</div>
+    <div>© 2026 | Pollachi, Tamil Nadu, India</div>
+</footer>
+
+
+<script>
+
+const WEB_APP_URL =
+"https://script.google.com/macros/s/AKfycbwGxRuoZvGndujcsk3ujiV0ky041R9aEnbvhJybECA1UPlo_m74YWbQPscAskQq3xIX8A/exec";
+
+
+async function checkStatus() {
+
+    const articleId =
+        document.getElementById("articleId").value.trim();
+
+    const result =
+        document.getElementById("result");
+
+    if (!articleId) {
+
+        result.style.display = "block";
+        result.className = "result error";
+
+        result.innerHTML =
+            "<strong>Article ID உள்ளிடவும்.</strong>";
+
+        return;
+    }
+
+
+    result.style.display = "block";
+    result.className = "result";
+
+    result.innerHTML =
+        "தயவுசெய்து காத்திருக்கவும்...";
+
+
+    try {
+
+        const response =
+            await fetch(WEB_APP_URL);
+
+        if (!response.ok) {
+            throw new Error("Network response was not OK");
+        }
+
+        const data =
+            await response.json();
+
+
+        const article =
+            data.find(function(item) {
+
+                return String(item.articleId).trim().toUpperCase()
+                    === articleId.toUpperCase();
+
+            });
+
+
+        if (!article) {
+
+            result.className = "result error";
+
+            result.innerHTML =
+                "<strong>Article ID கிடைக்கவில்லை.</strong><br><br>" +
+                "நீங்கள் உள்ளிட்ட Article ID-ஐ சரிபார்க்கவும்.";
+
+            return;
+        }
+
+
+        result.className = "result success";
+
+        result.innerHTML =
+            "<div class='info'><strong>Article ID:</strong> "
+            + article.articleId
+            + "</div>"
+
+            + "<div class='info'><strong>Article Title:</strong> "
+            + article.articleTitle
+            + "</div>"
+
+            + "<div class='info'><strong>Current Status:</strong></div>"
+
+            + "<div class='status'>"
+            + article.status
+            + "</div>";
+
+
+    } catch (error) {
+
+        result.className = "result error";
+
+        result.innerHTML =
+            "<strong>தகவலைப் பெற முடியவில்லை.</strong><br><br>" +
+            "Internet connection அல்லது Google Web App அமைப்பைச் சரிபார்க்கவும்.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
