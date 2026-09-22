@@ -81,7 +81,24 @@ h2 {
     border-left: 5px solid #1bcedf;
     padding-left: 12px;
 }
+details {
+    margin: 15px 0;
+}
 
+details summary {
+    cursor: pointer;
+    list-style: none;
+    background: #f3eef8;
+    padding: 15px 20px;
+    border-left: 5px solid #5b247a;
+    border-radius: 8px;
+    color: #3f1763;
+    font-weight: bold;
+}
+
+details summary::-webkit-details-marker {
+    display: none;
+}
 p {
     line-height: 1.8;
 }
