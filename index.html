@@ -8,362 +8,441 @@
 
 <style>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    line-height: 1.7;
-    background: #f7f8fc;
-    color: #252545;
+body{
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
 /* ================= HEADER ================= */
 
-header {
-    background: linear-gradient(135deg, #4b0082, #7026a8, #8e44ad);
-    color: white;
-    padding: 25px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 22px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:28px 20px 22px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-.logo {
-    width: 95px;
-    height: 95px;
-    object-fit: contain;
-    background: white;
-    border-radius: 50%;
-    padding: 5px;
+.logo{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:10px;
 }
 
-.header-text {
-    text-align: center;
+header h1{
+    font-size:32px;
+    margin-bottom:2px;
+    font-weight:700;
 }
 
-.header-text h1 {
-    font-size: 34px;
-    margin-bottom: 2px;
+header h2{
+    font-size:21px;
+    font-weight:500;
+    margin-bottom:7px;
 }
 
-.header-text h2 {
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.header-text p {
-    font-size: 17px;
-    margin-top: 6px;
-    font-weight: bold;
+.header-tagline{
+    font-size:16px;
+    color:#e0e7ff;
+    font-weight:600;
 }
 
 /* ================= NAVIGATION ================= */
 
-nav {
-    background: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+nav{
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px;
+    padding:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a {
-    text-decoration: none;
-    color: #4b0082;
-    padding: 8px 13px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
+nav a{
+    text-decoration:none;
+    color:#312e81;
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-nav a:hover {
-    background: #eee4f8;
-    color: #8e44ad;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
 /* ================= HERO ================= */
 
-.hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #f5edff, #ffffff, #f0f5ff);
+.hero{
+    background:linear-gradient(135deg,#eef2ff,#faf5ff);
+    padding:55px 20px;
+    text-align:center;
 }
 
-.hero p {
-    max-width: 850px;
-    margin: 12px auto;
-    color: #444;
-    font-size: 16px;
+.hero h3{
+    color:#312e81;
+    font-size:29px;
+    margin-bottom:10px;
 }
 
-.buttons {
-    margin-top: 28px;
+.hero .english-title{
+    font-size:20px;
+    color:#555;
+    margin-bottom:18px;
 }
 
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 12px 25px;
-    margin: 5px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: 0.3s;
+.hero p{
+    max-width:950px;
+    margin:8px auto;
+    font-size:17px;
 }
 
-.btn-primary {
-    background: #6a1b9a;
-    color: white;
+.hero-buttons{
+    margin-top:25px;
 }
 
-.btn-primary:hover {
-    background: #4b0082;
-    transform: translateY(-2px);
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:11px 22px;
+    margin:5px;
+    border-radius:25px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-.btn-secondary {
-    background: white;
-    color: #6a1b9a;
-    border: 2px solid #6a1b9a;
+.btn-primary{
+    background:#4f46e5;
+    color:white;
 }
 
-.btn-secondary:hover {
-    background: #f3e5f5;
+.btn-secondary{
+    background:#ffffff;
+    color:#312e81;
+    border:2px solid #4f46e5;
 }
 
-/* ================= SECTION TITLE ================= */
-
-section {
-    padding: 55px 7%;
+.btn:hover{
+    transform:translateY(-2px);
 }
 
-.section-title {
-    text-align: center;
-    color: #4b0082;
-    font-size: 30px;
-    margin-bottom: 35px;
+/* ================= GENERAL ================= */
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 4px;
-    background: #9b59b6;
-    margin: 10px auto;
-    border-radius: 10px;
+.section{
+    padding:45px 0;
 }
 
-/* ================= ACADEMIC IDENTITY ================= */
-
-.identity-grid {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.section-title{
+    text-align:center;
+    color:#312e81;
+    font-size:27px;
+    margin-bottom:8px;
 }
 
-.identity-card {
-    background: white;
-    border-radius: 18px;
-    padding: 28px 22px;
-    text-align: center;
-    box-shadow: 0 5px 18px rgba(65, 35, 90, 0.12);
-    border-top: 5px solid #8e44ad;
-    transition: 0.3s;
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:28px;
 }
 
-.identity-card:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 10px 25px rgba(65, 35, 90, 0.20);
+/* ================= HIGHLIGHTS ================= */
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-/* ================= ICONS ================= */
-
-.icon {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 16px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 34px;
-    color: white;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.16);
+.highlight-card{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border-top:4px solid #4f46e5;
+    text-align:center;
 }
 
-.icon-open {
-    background: linear-gradient(135deg, #00a8cc, #0077b6);
+.highlight-card .icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
 }
 
-.icon-multi {
-    background: linear-gradient(135deg, #8e44ad, #5e2a84);
+.icon-purple{background:#ede9fe;}
+.icon-blue{background:#dbeafe;}
+.icon-green{background:#dcfce7;}
+.icon-orange{background:#ffedd5;}
+.icon-pink{background:#fce7f3;}
+.icon-yellow{background:#fef3c7;}
+
+.highlight-card h4{
+    color:#312e81;
+    margin-bottom:5px;
 }
 
-.icon-review {
-    background: linear-gradient(135deg, #e67e22, #d35400);
+.highlight-card p{
+    font-size:14px;
+    color:#555;
 }
 
-.icon-research {
-    background: linear-gradient(135deg, #16a085, #087f5b);
+/* ================= AIM & SCOPE ================= */
+
+.scope-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
 }
 
-.icon-world {
-    background: linear-gradient(135deg, #2980b9, #1f618d);
+.scope-box h3{
+    color:#312e81;
+    margin-bottom:10px;
 }
 
-.icon-peer {
-    background: linear-gradient(135deg, #c0392b, #922b21);
+.scope-box p{
+    margin-bottom:14px;
 }
 
-.identity-card h3 {
-    color: #4b0082;
-    font-size: 18px;
-    margin-bottom: 4px;
+.scope-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:10px;
+    margin-top:15px;
 }
 
-.identity-card h4 {
-    color: #7d3c98;
-    font-size: 17px;
-    margin-bottom: 12px;
+.scope-list div{
+    background:#f5f3ff;
+    padding:10px 14px;
+    border-radius:8px;
+    border-left:4px solid #6366f1;
 }
 
-.identity-card p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 8px;
+/* ================= RESEARCH AREAS ================= */
+
+.research-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
 }
 
-/* ================= JOURNAL PROFILE ================= */
-
-.profile {
-    background: #f0eaf7;
+.research-card{
+    background:white;
+    padding:22px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 4px 12px rgba(0,0,0,0.07);
+    transition:0.3s;
 }
 
-.profile-grid {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+.research-card:hover{
+    transform:translateY(-4px);
 }
 
-.profile-card {
-    background: white;
-    padding: 18px 22px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+.research-icon{
+    font-size:35px;
+    margin-bottom:8px;
 }
 
-.profile-card strong {
-    color: #6a1b9a;
+.research-card h4{
+    color:#312e81;
+    font-size:17px;
+}
+
+/* ================= WHY PUBLISH ================= */
+
+.why-box{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+}
+
+.why-card{
+    background:#ffffff;
+    padding:22px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.07);
+}
+
+.why-card h4{
+    color:#312e81;
+    margin-bottom:7px;
+}
+
+/* ================= PROFILE ================= */
+
+.profile{
+    background:linear-gradient(135deg,#312e81,#4f46e5);
+    color:white;
+}
+
+.profile .section-title{
+    color:white;
+}
+
+.profile-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:15px;
+}
+
+.profile-card{
+    background:rgba(255,255,255,0.12);
+    padding:20px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.18);
+}
+
+.profile-card strong{
+    display:block;
+    color:#c7d2fe;
+    margin-bottom:4px;
+}
+
+/* ================= INDEXING ================= */
+
+.indexing-box{
+    background:white;
+    padding:28px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.notice{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:15px;
+    margin-top:18px;
+    border-radius:7px;
 }
 
 /* ================= ABOUT ================= */
 
-.about-box {
-    max-width: 950px;
-    margin: auto;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+.about-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
 }
 
-.about-box p {
-    margin-bottom: 15px;
-    text-align: justify;
+.about-box h3{
+    color:#312e81;
+    margin-bottom:10px;
+}
+
+/* ================= SUBMISSION ================= */
+
+.submit-box{
+    background:linear-gradient(135deg,#eef2ff,#f5f3ff);
+    text-align:center;
+    padding:40px 20px;
+    border-radius:18px;
+    border:1px solid #ddd6fe;
+}
+
+.email{
+    color:#312e81;
+    font-weight:bold;
 }
 
 /* ================= FOOTER ================= */
 
-footer {
-    background: #35104f;
-    color: white;
-    text-align: center;
-    padding: 28px 15px;
-    margin-top: 20px;
+footer{
+    background:#111827;
+    color:#d1d5db;
+    text-align:center;
+    padding:28px 15px;
+    margin-top:20px;
 }
 
-footer p {
-    margin: 5px 0;
-    font-size: 14px;
+footer strong{
+    color:white;
+}
+
+footer p{
+    margin:4px 0;
+    font-size:14px;
 }
 
 /* ================= MOBILE ================= */
 
-@media (max-width: 900px) {
+@media(max-width:600px){
 
-    .identity-grid {
-        grid-template-columns: repeat(2, 1fr);
+    header h1{
+        font-size:26px;
+    }
+
+    header h2{
+        font-size:18px;
+    }
+
+    .hero h3{
+        font-size:23px;
+    }
+
+    nav{
+        position:static;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 9px;
+    }
+
+    .section{
+        padding:32px 0;
     }
 
 }
-
-@media (max-width: 600px) {
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-text h1 {
-        font-size: 27px;
-    }
-
-    .header-text h2 {
-        font-size: 19px;
-    }
-
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .identity-grid,
-    .profile-grid {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-/* ================= END ================= */
 
 </style>
 </head>
 
-
 <body>
-
 
 <!-- ================= HEADER ================= -->
 
 <header>
 
-    <img src="logo.png.png"
-         alt="தமிழியல் பரிமாணங்கள் Logo"
-         class="logo">
+    <img src="logo.png.png" alt="தமிழியல் பரிமாணங்கள் Logo" class="logo">
 
-    <div class="header-text">
+    <h1>தமிழியல் பரிமாணங்கள்</h1>
 
-        <h1>தமிழியல் பரிமாணங்கள்</h1>
+    <h2>Dimensions of Tamil Studies</h2>
 
-        <h2>Dimensions of Tamil Studies</h2>
-
-        <p>
-            International Peer-Reviewed Quarterly E-Journal
-        </p>
-
+    <div class="header-tagline">
+        அறிஞர்களால் மதிப்பீடு செய்யப்படும் காலாண்டு சர்வதேசத் தமிழ் ஆய்விதழ்
+        <br>
+        Peer-Reviewed Quarterly International Journal of Tamil Studies
     </div>
 
 </header>
@@ -374,21 +453,13 @@ footer p {
 <nav>
 
     <a href="index.html">Home</a>
-
     <a href="about.html">About</a>
-
     <a href="aims.html">Aims &amp; Scope</a>
-
     <a href="editorial.html">Editorial Board</a>
-
     <a href="guidelines.html">Author Guidelines</a>
-
     <a href="peer-review.html">Peer Review</a>
-
     <a href="ethics.html">Publication Ethics</a>
-
     <a href="archives.html">Archives</a>
-
     <a href="contact.html">Contact</a>
 
 </nav>
@@ -398,205 +469,476 @@ footer p {
 
 <section class="hero">
 
-    <p>
-        தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல் சார்ந்த
-        பல்வேறு ஆய்வுத்துறைகளில் புதிய ஆய்வுகளை வெளியிடும்
-        பன்னாட்டுத் தரத்திலான ஆய்விதழ்.
-    </p>
+    <div class="container">
 
-    <p>
-        A peer-reviewed scholarly journal dedicated to research in
-        Tamil language, literature, culture, history and related
-        interdisciplinary fields.
-    </p>
+        <h3>தமிழியல் ஆய்வுக்கான பன்னாட்டுக் கல்வியியல் தளம்</h3>
 
-    <div class="buttons">
+        <div class="english-title">
+            A Scholarly Platform for Tamil Studies
+        </div>
 
-        <a href="call-for-papers.html" class="btn btn-primary">
-            Call for Papers
-        </a>
+        <p>
+            தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல்
+            சார்ந்த பல்வேறு ஆய்வுத்துறைகளில் தரமான ஆய்வுகளை வெளியிடும்
+            மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழ்.
+        </p>
 
-        <a href="submit.html" class="btn btn-secondary">
-            Submit Article
-        </a>
+        <p>
+            A peer-reviewed scholarly journal dedicated to research in
+            Tamil language, literature, culture, history and related
+            interdisciplinary fields.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="call-for-papers.html" class="btn btn-primary">
+                📢 Call for Papers
+            </a>
+
+            <a href="submit.html" class="btn btn-secondary">
+                📝 Submit Article
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= ACADEMIC IDENTITY ================= -->
+<!-- ================= JOURNAL HIGHLIGHTS ================= -->
 
-<section>
+<section class="section">
+
+<div class="container">
 
     <h2 class="section-title">
-        Academic Identity
-        <br>
-        <span>ஆய்வியல் அடையாளங்கள்</span>
+        Journal Highlights &amp; Key Information
     </h2>
 
+    <p class="section-subtitle">
+        ஆய்விதழின் சிறப்பம்சங்கள் மற்றும் முக்கியத் தகவல்கள்
+    </p>
 
-    <div class="identity-grid">
 
+    <div class="highlight-grid">
 
-        <!-- OPEN ACCESS -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-purple">📖</div>
 
-            <div class="icon icon-open">🔓</div>
-
-            <h3>OPEN ACCESS</h3>
-
-            <h4>திறந்த அணுகல்</h4>
-
-            <p>
-                Free and unrestricted access to published
-                research articles for readers and researchers.
-            </p>
+            <h4>Quarterly</h4>
 
             <p>
-                வெளியிடப்படும் ஆய்வுக் கட்டுரைகளை அனைவரும்
-                இலவசமாகவும் தடையின்றியும் அணுகும் வகையில்
-                திறந்த அணுகல்.
+                காலாண்டிதழ்<br>
+                ஆண்டிற்கு நான்கு இதழ்கள்
             </p>
 
         </div>
 
 
-        <!-- MULTIDISCIPLINARY -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-blue">🔍</div>
 
-            <div class="icon icon-multi">🌐</div>
-
-            <h3>MULTIDISCIPLINARY</h3>
-
-            <h4>பன்முகத்துறை</h4>
+            <h4>Peer Reviewed</h4>
 
             <p>
-                Research integrating Tamil language, literature,
-                culture, history, society, science and related
-                disciplines.
-            </p>
-
-            <p>
-                தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு, சமூகம்,
-                அறிவியல் மற்றும் தொடர்புடைய பன்முகத் துறைகளை
-                ஒருங்கிணைக்கும் ஆய்வுகள்.
+                அறிஞர்களால் மதிப்பாய்வு செய்யப்படும்
+                ஆய்விதழ்
             </p>
 
         </div>
 
 
-        <!-- DOUBLE BLIND PEER REVIEW -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-green">🔓</div>
 
-            <div class="icon icon-review">👥</div>
-
-            <h3>DOUBLE-BLIND PEER REVIEWED</h3>
-
-            <h4>இரட்டை மறைமுக மதிப்பாய்வு</h4>
+            <h4>Open Access</h4>
 
             <p>
-                Manuscripts are evaluated through a
-                double-blind peer-review process by
-                qualified reviewers.
-            </p>
-
-            <p>
-                ஆசிரியர் மற்றும் மதிப்பாய்வாளர் அடையாளங்கள்
-                மறைக்கப்பட்ட இரட்டை மறைமுக மதிப்பாய்வு
-                முறையின் மூலம் ஆய்வுகள் மதிப்பிடப்படுகின்றன.
+                வெளியிடப்பட்ட ஆய்வுகளுக்கான
+                திறந்த அணுகல்
             </p>
 
         </div>
 
 
-        <!-- SCHOLARLY RESEARCH -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-orange">🌐</div>
 
-            <div class="icon icon-research">📚</div>
-
-            <h3>SCHOLARLY RESEARCH</h3>
-
-            <h4>ஆய்வியல் வெளியீடு</h4>
+            <h4>International Scope</h4>
 
             <p>
-                Encouraging original, evidence-based and
-                academically significant research.
-            </p>
-
-            <p>
-                புதிய, ஆதாரபூர்வமான மற்றும் கல்வியியல்
-                முக்கியத்துவம் வாய்ந்த ஆய்வுகளை
-                ஊக்குவிக்கும் வெளியீடு.
+                பன்னாட்டுப் பார்வையுடன்
+                தமிழியல் ஆய்வுகள்
             </p>
 
         </div>
 
 
-        <!-- INTERNATIONAL -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-pink">🧩</div>
 
-            <div class="icon icon-world">🌍</div>
-
-            <h3>INTERNATIONAL</h3>
-
-            <h4>சர்வதேச</h4>
+            <h4>Multidisciplinary</h4>
 
             <p>
-                Connecting Tamil studies research with
-                the wider global academic community.
-            </p>
-
-            <p>
-                தமிழியல் ஆய்வுகளை உலகளாவிய கல்வியியல்
-                சூழலுடன் இணைக்கும் சர்வதேச ஆய்விதழ்.
+                பன்முகத்துறை தமிழியல்
+                ஆய்வுகளுக்கான தளம்
             </p>
 
         </div>
 
 
-        <!-- PEER REVIEWED -->
+        <div class="highlight-card">
 
-        <div class="identity-card">
+            <div class="icon icon-yellow">📑</div>
 
-            <div class="icon icon-peer">✓</div>
-
-            <h3>PEER-REVIEWED</h3>
-
-            <h4>தர மதிப்பாய்வு செய்யப்பட்ட ஆய்விதழ்</h4>
+            <h4>ISSN</h4>
 
             <p>
-                Research manuscripts are assessed for
-                academic quality, originality and relevance.
-            </p>
-
-            <p>
-                ஆய்வுகளின் கல்வியியல் தரம், புதுமை மற்றும்
-                பொருத்தம் ஆகியவை மதிப்பாய்வு செய்யப்படுகின்றன.
+                ISSN பெறும் நடைமுறை
+                முன்னெடுக்கப்பட உள்ளது
             </p>
 
         </div>
-
 
     </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= AIM AND SCOPE ================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Aim and Scope
+    </h2>
+
+    <p class="section-subtitle">
+        நோக்கமும் ஆய்வெல்லையும்
+    </p>
+
+
+    <div class="scope-box">
+
+        <h3>Our Aim | எமது நோக்கம்</h3>
+
+        <p>
+            “தமிழியல் பரிமாணங்கள்” இதழ் தமிழ் மொழி, இலக்கியம்,
+            பண்பாடு, வரலாறு மற்றும் தமிழியல் சார்ந்த பல்வேறு
+            ஆய்வுத்துறைகளில் புதிய ஆய்வுச் சிந்தனைகளை ஊக்குவிப்பதை
+            நோக்கமாகக் கொண்டுள்ளது.
+        </p>
+
+        <p>
+            தரமான ஆய்வுகளை வெளியிடுதல், ஆய்வாளர்களிடையே
+            கல்வியியல் பரிமாற்றத்தை வளர்த்தல் மற்றும் தமிழியல்
+            ஆய்வுகளை பன்னாட்டுக் கல்வியியல் சூழலுடன் இணைத்தல்
+            ஆகியவை இதழின் முக்கிய நோக்கங்களாகும்.
+        </p>
+
+
+        <h3>Scope | ஆய்வெல்லை</h3>
+
+        <div class="scope-list">
+
+            <div>தமிழ் மொழி மற்றும் மொழியியல்</div>
+            <div>தமிழ் இலக்கியம்</div>
+            <div>சங்க இலக்கிய ஆய்வுகள்</div>
+            <div>இலக்கணம் மற்றும் மொழியியல்</div>
+            <div>தமிழர் வரலாறு</div>
+            <div>தமிழர் பண்பாடு மற்றும் வாழ்வியல்</div>
+            <div>தொல்லியல் மற்றும் கல்வெட்டியல்</div>
+            <div>நாட்டார் வழக்காற்றியல்</div>
+            <div>ஒப்பிலக்கியம்</div>
+            <div>சமூக மற்றும் பண்பாட்டு ஆய்வுகள்</div>
+            <div>அறிவியல் சார்ந்த தமிழியல் ஆய்வுகள்</div>
+            <div>பல்துறை மற்றும் இடைத்துறை ஆய்வுகள்</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= RESEARCH AREAS ================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Research Areas
+    </h2>
+
+    <p class="section-subtitle">
+        ஆய்வுக்கான முக்கியப் பகுதிகள்
+    </p>
+
+
+    <div class="research-grid">
+
+
+        <div class="research-card">
+
+            <div class="research-icon">📚</div>
+
+            <h4>Classical &amp; Modern Tamil Literature</h4>
+
+            <p>
+                செவ்வியல் மற்றும் நவீன தமிழ் இலக்கியம்
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-icon">🔤</div>
+
+            <h4>Linguistics &amp; Grammar</h4>
+
+            <p>
+                மொழியியல் மற்றும் இலக்கணம்
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-icon">🏛️</div>
+
+            <h4>History &amp; Cultural Studies</h4>
+
+            <p>
+                வரலாறு மற்றும் பண்பாட்டு ஆய்வுகள்
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-icon">🏺</div>
+
+            <h4>Archaeology &amp; Epigraphy</h4>
+
+            <p>
+                தொல்லியல் மற்றும் கல்வெட்டியல்
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-icon">🎭</div>
+
+            <h4>Folklore &amp; Cultural Studies</h4>
+
+            <p>
+                நாட்டார் வழக்காற்றியல் மற்றும் பண்பாட்டியல்
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <div class="research-icon">🌏</div>
+
+            <h4>Comparative &amp; Interdisciplinary Studies</h4>
+
+            <p>
+                ஒப்பிலக்கியம் மற்றும் இடைத்துறை ஆய்வுகள்
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY PUBLISH ================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Why Publish With Us?
+    </h2>
+
+    <p class="section-subtitle">
+        எங்களுடன் ஏன் ஆய்வை வெளியிட வேண்டும்?
+    </p>
+
+
+    <div class="why-box">
+
+
+        <div class="why-card">
+
+            <h4>🔎 Peer Review</h4>
+
+            <p>
+                சமர்ப்பிக்கப்படும் ஆய்வுகள் இதழின்
+                மதிப்பாய்வு நடைமுறைக்கு உட்படுத்தப்படும்.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h4>🔓 Open Access</h4>
+
+            <p>
+                வெளியிடப்படும் ஆய்வுகளை வாசகர்கள்
+                திறந்த அணுகலில் பயன்படுத்தும் வகையில்
+                இதழ் செயல்படும்.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h4>🌐 International Academic Platform</h4>
+
+            <p>
+                தமிழியல் ஆய்வுகளைப் பன்னாட்டுக்
+                கல்வியியல் சூழலுடன் இணைக்கும் தளமாக
+                இதழ் செயல்படுகிறது.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h4>🧩 Multidisciplinary Research</h4>
+
+            <p>
+                தமிழியல் தொடர்பான பல்வேறு
+                இடைத்துறை மற்றும் பன்முகத்துறை
+                ஆய்வுகளுக்கு வாய்ப்பு வழங்கப்படுகிறது.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h4>📋 Clear Publication Policies</h4>
+
+            <p>
+                ஆசிரியர் வழிகாட்டுதல்கள், மதிப்பாய்வு,
+                வெளியீட்டு நெறிமுறைகள் போன்றவை
+                தெளிவாக வழங்கப்படும்.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h4>📢 Research Visibility</h4>
+
+            <p>
+                ஆய்வாளர்களின் தரமான ஆய்வுகளை
+                கல்வியியல் வாசகர்களிடம் கொண்டு செல்லும்
+                நோக்கத்துடன் இதழ் செயல்படுகிறது.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= INDEXING ================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <h2 class="section-title">
+        Indexing &amp; Academic Visibility
+    </h2>
+
+    <p class="section-subtitle">
+        அட்டவணைப்படுத்தல் மற்றும் கல்விசார் தெரிவுநிலை
+    </p>
+
+
+    <div class="indexing-box">
+
+        <p>
+            “தமிழியல் பரிமாணங்கள்” இதழ் தகுதி மற்றும்
+            தேவையான நடைமுறைகள் பூர்த்தி செய்யப்படும் நிலையில்
+            பொருத்தமான கல்விசார் தேடல் மற்றும்
+            அட்டவணைப்படுத்தல் சேவைகளில் இடம்பெறுவதற்கான
+            முயற்சிகளை மேற்கொள்ளும்.
+        </p>
+
+        <p>
+            The journal will pursue inclusion in appropriate
+            scholarly discovery and indexing services as
+            eligibility requirements and publication history
+            permit.
+        </p>
+
+
+        <div class="notice">
+
+            <strong>Important:</strong><br>
+
+            ISSN மற்றும் indexing தொடர்பான அதிகாரப்பூர்வ
+            அங்கீகாரங்கள் கிடைத்த பின்னரே அவை website-ல்
+            அதிகாரப்பூர்வமாக குறிப்பிடப்படும்.
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
 
 <!-- ================= JOURNAL PROFILE ================= -->
 
-<section class="profile">
+<section class="section profile">
+
+<div class="container">
 
     <h2 class="section-title">
         Journal Profile
-        <br>
-        <span>இதழ் விவரம்</span>
     </h2>
+
+    <p class="section-subtitle" style="color:#ddd;">
+        ஆய்விதழ் விவரம்
+    </p>
 
 
     <div class="profile-grid">
@@ -604,7 +946,17 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>Publisher / வெளியீட்டாளர்</strong><br>
+            <strong>Journal Title</strong>
+
+            தமிழியல் பரிமாணங்கள்<br>
+            Dimensions of Tamil Studies
+
+        </div>
+
+
+        <div class="profile-card">
+
+            <strong>Publisher</strong>
 
             Dr. T. Geethanjali
 
@@ -613,7 +965,7 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>Editor-in-Chief / முதன்மை ஆசிரியர்</strong><br>
+            <strong>Editor-in-Chief</strong>
 
             Dr. T. Geethanjali
 
@@ -622,7 +974,7 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>Frequency / வெளியீட்டு கால அளவு</strong><br>
+            <strong>Frequency</strong>
 
             Quarterly / காலாண்டிதழ்
 
@@ -631,7 +983,7 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>Format / வடிவம்</strong><br>
+            <strong>Format</strong>
 
             Online E-Journal / இணைய மின்னிதழ்
 
@@ -640,7 +992,7 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>Place of Publication / வெளியீட்டு இடம்</strong><br>
+            <strong>Place of Publication</strong>
 
             Pollachi, Tamil Nadu, India
 
@@ -649,39 +1001,53 @@ footer p {
 
         <div class="profile-card">
 
-            <strong>ISSN</strong><br>
+            <strong>ISSN</strong>
 
             To be assigned
 
         </div>
 
 
+        <div class="profile-card">
+
+            <strong>Review Process</strong>
+
+            Double-Blind Peer Review
+
+        </div>
+
     </div>
+
+</div>
 
 </section>
 
 
 <!-- ================= ABOUT ================= -->
 
-<section>
+<section class="section">
+
+<div class="container">
 
     <h2 class="section-title">
-        தமிழியல் பரிமாணங்கள்
+        About the Journal
     </h2>
+
+    <p class="section-subtitle">
+        இதழைப் பற்றி
+    </p>
 
 
     <div class="about-box">
 
+        <h3>தமிழியல் பரிமாணங்கள்</h3>
+
         <p>
-            <strong>
-                தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)
-            </strong>
+            “தமிழியல் பரிமாணங்கள்” (Dimensions of Tamil Studies)
             என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும்
             தமிழியல் சார்ந்த பல்வேறு ஆய்வுத்துறைகளை ஒருங்கிணைக்கும்
-            சர்வதேசத் தரத்திலான மதிப்பாய்வு செய்யப்பட்ட காலாண்டு
-            மின்னிதழாகும்.
+            மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழாகும்.
         </p>
-
 
         <p>
             இவ்விதழ் புதிய ஆய்வுச் சிந்தனைகளை ஊக்குவித்தல்,
@@ -691,15 +1057,73 @@ footer p {
         </p>
 
 
+        <h3 style="margin-top:22px;">
+            About the Journal
+        </h3>
+
         <p>
-            <strong>Dimensions of Tamil Studies</strong>
-            provides a scholarly platform for researchers to
-            communicate original research and contribute to the
-            development of Tamil studies in the global academic
-            environment.
+            Dimensions of Tamil Studies is a peer-reviewed
+            quarterly e-journal dedicated to scholarly research
+            in Tamil language, literature, culture, history and
+            related interdisciplinary fields.
+        </p>
+
+        <p>
+            The journal aims to encourage new research ideas,
+            facilitate the publication of quality scholarly work,
+            and promote academic exchange among researchers
+            working in Tamil Studies.
         </p>
 
     </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SUBMIT ================= -->
+
+<section class="section">
+
+<div class="container">
+
+    <div class="submit-box">
+
+        <h2 class="section-title">
+            Submit Your Research
+        </h2>
+
+        <p>
+            உங்கள் ஆய்வுக் கட்டுரையை எங்கள் இதழுக்கு
+            சமர்ப்பிக்க வரவேற்கிறோம்.
+        </p>
+
+        <p>
+            Researchers are invited to submit original
+            scholarly manuscripts in accordance with the
+            journal's Author Guidelines.
+        </p>
+
+        <p class="email">
+            📧 t.geethanjalingmc@gmail.com
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="submit.html" class="btn btn-primary">
+                📝 Submit Article
+            </a>
+
+            <a href="guidelines.html" class="btn btn-secondary">
+                📋 Author Guidelines
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
 
 </section>
 
@@ -709,12 +1133,15 @@ footer p {
 <footer>
 
     <p>
-        © 2026 தமிழியல் பரிமாணங்கள்
-        (Dimensions of Tamil Studies)
+        <strong>தமிழியல் பரிமாணங்கள்</strong>
     </p>
 
     <p>
-        International Peer-Reviewed Quarterly E-Journal
+        Dimensions of Tamil Studies
+    </p>
+
+    <p>
+        Peer-Reviewed Quarterly International Journal of Tamil Studies
     </p>
 
     <p>
@@ -722,11 +1149,14 @@ footer p {
     </p>
 
     <p>
-        Email: t.geethanjalingmc@gmail.com
+        📧 t.geethanjalingmc@gmail.com
+    </p>
+
+    <p style="margin-top:12px;">
+        © 2026 தமிழியல் பரிமாணங்கள். All Rights Reserved.
     </p>
 
 </footer>
-
 
 </body>
 </html>
