@@ -5,609 +5,631 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies – International Peer-Reviewed Journal</title>
-
-<meta name="description" content="தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies) is an International Peer-Reviewed Quarterly E-Journal focusing on Tamil language, literature, culture, history and multidisciplinary Tamil studies research.">
-
-<meta name="keywords" content="Tamil peer reviewed journal, Tamil academic journal, Tamil research journal, Tamil studies, Tamil literature, Tamil language research, தமிழியல் பரிமாணங்கள்">
-
-<meta name="author" content="Dr. T. Geethanjali">
-
-<link rel="canonical" href="https://geethanjalingm.github.io/dimensions-of-tamil-studies/">
+<title>தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies</title>
 
 <style>
-
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, "Noto Sans Tamil", sans-serif;
-    background: #f7f4fa;
-    color: #333;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.7;
+    background: #f7f8fc;
+    color: #252545;
 }
 
 /* HEADER */
-
 header {
-    background: linear-gradient(135deg, #35184f, #6b2c91, #8d55ad);
+    background: linear-gradient(135deg, #4b0082, #7026a8, #8e44ad);
     color: white;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-.header-content {
+    padding: 18px 7%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 22px;
-    flex-wrap: wrap;
+    gap: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.18);
 }
 
 .logo {
-    width: 125px;
-    height: auto;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
 }
 
-.header-title {
-    text-align: center;
+.header-text h1 {
+    font-size: 29px;
+    margin-bottom: 2px;
 }
 
-.header-title .tamil {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-.header-title .english {
-    font-size: 22px;
-    margin-top: 6px;
-}
-
-.header-title .tagline {
-    font-size: 17px;
-    margin-top: 10px;
-    font-weight: bold;
-    letter-spacing: 0.5px;
-}
-
-/* NAVIGATION */
-
-nav {
-    background-color: #281238;
-    text-align: center;
-    padding: 15px 10px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 11px;
-    font-size: 15px;
+.header-text h2 {
+    font-size: 19px;
     font-weight: 500;
 }
 
+.header-text p {
+    font-size: 14px;
+    margin-top: 4px;
+    opacity: 0.95;
+}
+
+/* NAVIGATION */
+nav {
+    background: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4b0082;
+    padding: 8px 13px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
 nav a:hover {
-    color: #ffd98a;
+    background: #eee4f8;
+    color: #8e44ad;
 }
 
 /* HERO */
-
 .hero {
     text-align: center;
-    background: white;
-    margin: 40px auto 30px;
-    padding: 50px 25px;
-    max-width: 1000px;
-    border-radius: 18px;
-    box-shadow: 0 5px 22px rgba(0,0,0,0.10);
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #f5edff, #ffffff, #f0f5ff);
 }
 
 .hero h1 {
-    color: #542478;
-    font-size: 36px;
-    margin-bottom: 8px;
+    color: #4b0082;
+    font-size: 42px;
+    margin-bottom: 4px;
 }
 
-.hero .english-title {
+.hero h2 {
+    color: #6c3483;
     font-size: 25px;
-    color: #555;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.hero .journal-type {
-    display: inline-block;
-    background: #542478;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-size: 17px;
+.hero .tagline {
+    color: #8e44ad;
+    font-size: 18px;
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 17px;
-    line-height: 1.8;
+    max-width: 850px;
+    margin: 7px auto;
+    color: #444;
 }
 
-/* BUTTONS */
+.buttons {
+    margin-top: 28px;
+}
 
-.button {
+.btn {
     display: inline-block;
-    background-color: #542478;
-    color: white;
     text-decoration: none;
-    padding: 13px 24px;
-    border-radius: 8px;
-    margin: 10px 6px;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 25px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-.button:hover {
-    background-color: #7a3aa6;
+.btn-primary {
+    background: #6a1b9a;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #4b0082;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: #6a1b9a;
+    border: 2px solid #6a1b9a;
+}
+
+.btn-secondary:hover {
+    background: #f3e5f5;
+}
+
+/* SECTION */
+section {
+    padding: 55px 7%;
+}
+
+.section-title {
+    text-align: center;
+    color: #4b0082;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background: #9b59b6;
+    margin: 10px auto;
+    border-radius: 10px;
 }
 
 /* ACADEMIC IDENTITY */
-
-.identity-title {
-    text-align: center;
-    color: #542478;
-    font-size: 28px;
-    margin: 45px 0 25px;
-}
-
 .identity-grid {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 0 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .identity-card {
     background: white;
-    border-radius: 16px;
-    padding: 28px 20px;
+    border-radius: 18px;
+    padding: 28px 22px;
     text-align: center;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.09);
-    border-top: 5px solid #6b2c91;
-    transition: transform 0.2s ease;
+    box-shadow: 0 5px 18px rgba(65, 35, 90, 0.12);
+    border-top: 5px solid #8e44ad;
+    transition: 0.3s;
 }
 
 .identity-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+    box-shadow: 0 10px 25px rgba(65, 35, 90, 0.20);
 }
 
+/* ICON */
 .icon {
-    font-size: 42px;
-    margin-bottom: 12px;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    color: white;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.16);
+}
+
+/* DIFFERENT COLOUR ICONS */
+.icon-open {
+    background: linear-gradient(135deg, #00a8cc, #0077b6);
+}
+
+.icon-multi {
+    background: linear-gradient(135deg, #8e44ad, #5e2a84);
+}
+
+.icon-review {
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.icon-research {
+    background: linear-gradient(135deg, #16a085, #087f5b);
+}
+
+.icon-world {
+    background: linear-gradient(135deg, #2980b9, #1f618d);
+}
+
+.icon-peer {
+    background: linear-gradient(135deg, #c0392b, #922b21);
 }
 
 .identity-card h3 {
-    margin: 5px 0;
-    color: #542478;
-    font-size: 19px;
+    color: #4b0082;
+    font-size: 18px;
+    margin-bottom: 4px;
 }
 
 .identity-card h4 {
-    margin: 5px 0 15px;
-    color: #7a3aa6;
-    font-size: 18px;
+    color: #7d3c98;
+    font-size: 17px;
+    margin-bottom: 12px;
 }
 
 .identity-card p {
-    font-size: 15px;
-    line-height: 1.7;
-    margin: 8px 0;
-}
-
-.identity-card .tamil-text {
-    color: #444;
+    font-size: 14px;
+    color: #555;
 }
 
 /* JOURNAL PROFILE */
-
 .profile {
-    max-width: 1000px;
-    margin: 45px auto;
-    background: white;
-    padding: 35px;
-    border-radius: 18px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
-
-.profile h2 {
-    text-align: center;
-    color: #542478;
-    font-size: 28px;
-    margin-bottom: 30px;
+    background: #f0eaf7;
 }
 
 .profile-grid {
+    max-width: 1000px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.profile-item {
-    background: #f7f1fb;
-    padding: 20px;
+.profile-card {
+    background: white;
+    padding: 18px 22px;
     border-radius: 12px;
-    border-left: 4px solid #6b2c91;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-.profile-item strong {
-    color: #542478;
-    font-size: 16px;
+.profile-card strong {
+    color: #6a1b9a;
 }
 
-.profile-item span {
-    display: block;
-    margin-top: 7px;
-    line-height: 1.6;
+/* ABOUT */
+.about-box {
+    max-width: 950px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.about-box p {
+    margin-bottom: 15px;
+    text-align: justify;
 }
 
 /* FOOTER */
-
 footer {
-    background-color: #281238;
+    background: #35104f;
     color: white;
     text-align: center;
-    padding: 32px 15px;
-    margin-top: 55px;
-    line-height: 1.8;
+    padding: 28px 15px;
+    margin-top: 20px;
 }
 
-footer strong {
-    color: #ffd98a;
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
 }
 
 /* MOBILE */
+@media (max-width: 900px) {
+    .identity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-    .header-title .tamil {
-        font-size: 28px;
+    header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .header-title .english {
-        font-size: 19px;
+    .header-text h1 {
+        font-size: 24px;
     }
 
     .hero h1 {
-        font-size: 29px;
+        font-size: 32px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 6px 8px;
+    .hero h2 {
+        font-size: 20px;
     }
 
+    .identity-grid,
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        position: relative;
+    }
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-
 <header>
 
-    <div class="header-content">
+    <img src="logo.png.png" alt="Journal Logo" class="logo">
 
-        <img src="logo.png.png"
-             alt="தமிழியல் பரிமாணங்கள் Logo"
-             class="logo">
-
-        <div class="header-title">
-
-            <div class="tamil">
-                தமிழியல் பரிமாணங்கள்
-            </div>
-
-            <div class="english">
-                Dimensions of Tamil Studies
-            </div>
-
-            <div class="tagline">
-                International Peer-Reviewed Journal
-            </div>
-
-        </div>
-
+    <div class="header-text">
+        <h1>தமிழியல் பரிமாணங்கள்</h1>
+        <h2>Dimensions of Tamil Studies</h2>
+        <p>International Peer-Reviewed Journal</p>
     </div>
 
 </header>
 
 
 <!-- NAVIGATION -->
-
 <nav>
-
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="aims-scope.html">Aims &amp; Scope</a>
-    <a href="editorial-board.html">Editorial Board</a>
-    <a href="author-guidelines.html">Author Guidelines</a>
+    <a href="aims.html">Aims & Scope</a>
+    <a href="editorial.html">Editorial Board</a>
+    <a href="guidelines.html">Author Guidelines</a>
     <a href="peer-review.html">Peer Review</a>
-    <a href="ethics.html">Ethics</a>
+    <a href="ethics.html">Publication Ethics</a>
     <a href="archives.html">Archives</a>
     <a href="contact.html">Contact</a>
-
 </nav>
 
 
 <!-- HERO -->
-
 <section class="hero">
 
     <h1>தமிழியல் பரிமாணங்கள்</h1>
 
-    <div class="english-title">
-        Dimensions of Tamil Studies
-    </div>
+    <h2>Dimensions of Tamil Studies</h2>
 
-    <div class="journal-type">
+    <div class="tagline">
         International Peer-Reviewed Quarterly E-Journal
     </div>
 
     <p>
-        <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
-        is a scholarly academic journal dedicated to research in Tamil
-        language, literature, culture, history and multidisciplinary
-        Tamil studies.
+        தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல் சார்ந்த
+        பல்வேறு ஆய்வுத்துறைகளில் புதிய ஆய்வுகளை வெளியிடும்
+        பன்னாட்டுத் தரத்திலான ஆய்விதழ்.
     </p>
 
     <p>
-        தமிழ் மொழி, இலக்கியம், மொழியியல், பண்பாடு, வரலாறு,
-        சமூகம், அறிவியல் மற்றும் தொடர்புடைய துறைகளில்
-        தரமான ஆய்வுகளை வெளியிடும் கல்விசார் மின்னிதழ்.
+        A peer-reviewed scholarly journal dedicated to research in
+        Tamil language, literature, culture, history and related
+        interdisciplinary fields.
     </p>
 
-    <a class="button" href="call-for-papers.html">
-        Call for Papers
-    </a>
+    <div class="buttons">
+        <a href="call-for-papers.html" class="btn btn-primary">
+            Call for Papers
+        </a>
 
-    <a class="button" href="submit-article.html">
-        Submit Article
-    </a>
+        <a href="submit.html" class="btn btn-secondary">
+            Submit Article
+        </a>
+    </div>
 
 </section>
 
 
 <!-- ACADEMIC IDENTITY -->
+<section>
 
-<h2 class="identity-title">
-    Academic Identity
-    <br>
-    <span>ஆய்வியல் அடையாளங்கள்</span>
-</h2>
+    <h2 class="section-title">
+        Academic Identity
+    </h2>
 
+    <div class="identity-grid">
 
-<div class="identity-grid">
+        <!-- OPEN ACCESS -->
+        <div class="identity-card">
 
+            <div class="icon icon-open">🔓</div>
 
-    <!-- OPEN ACCESS -->
+            <h3>OPEN ACCESS</h3>
+            <h4>திறந்த அணுகல்</h4>
 
-    <div class="identity-card">
+            <p>
+                Free and unrestricted access to published
+                research articles for readers and researchers.
+            </p>
 
-        <div class="icon">🔓</div>
+            <p>
+                வெளியிடப்படும் ஆய்வுக் கட்டுரைகளை
+                அனைவரும் இலவசமாகவும் தடையின்றியும்
+                அணுகும் வகையில் திறந்த அணுகல்.
+            </p>
 
-        <h3>OPEN ACCESS</h3>
-
-        <h4>திறந்த அணுகல்</h4>
-
-        <p>
-            Free and unrestricted access to published research articles.
-        </p>
-
-        <p class="tamil-text">
-            வெளியிடப்படும் ஆய்வுக் கட்டுரைகளை
-            இலவசமாகவும் தடையற்ற முறையிலும்
-            அணுகலாம்.
-        </p>
-
-    </div>
+        </div>
 
 
-    <!-- MULTIDISCIPLINARY -->
+        <!-- MULTIDISCIPLINARY -->
+        <div class="identity-card">
 
-    <div class="identity-card">
+            <div class="icon icon-multi">🌐</div>
 
-        <div class="icon">🌐</div>
+            <h3>MULTIDISCIPLINARY</h3>
+            <h4>பன்முகத்துறை</h4>
 
-        <h3>MULTIDISCIPLINARY</h3>
+            <p>
+                Research integrating Tamil language,
+                literature, culture, history, society,
+                science and related disciplines.
+            </p>
 
-        <h4>பன்முகத்துறை</h4>
+            <p>
+                தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு,
+                சமூகம், அறிவியல் மற்றும் தொடர்புடைய
+                பன்முகத் துறைகளை ஒருங்கிணைக்கும் ஆய்வுகள்.
+            </p>
 
-        <p>
-            Research integrating Tamil language, literature, culture,
-            history, society, science and related disciplines.
-        </p>
-
-        <p class="tamil-text">
-            தமிழ்மொழி, இலக்கியம், பண்பாடு, வரலாறு,
-            சமூகம், அறிவியல் மற்றும் தொடர்புடைய
-            பிற துறைகளை ஒருங்கிணைக்கும் ஆய்வுகளுக்கான தளம்.
-        </p>
-
-    </div>
-
-
-    <!-- DOUBLE BLIND PEER REVIEW -->
-
-    <div class="identity-card">
-
-        <div class="icon">👥</div>
-
-        <h3>DOUBLE-BLIND PEER REVIEWED</h3>
-
-        <h4>இரட்டை மறைமுக மதிப்பாய்வு</h4>
-
-        <p>
-            Manuscripts are evaluated through a double-blind
-            peer-review process.
-        </p>
-
-        <p class="tamil-text">
-            ஆய்வுக் கட்டுரைகள் இரட்டை மறைமுக
-            மதிப்பாய்வு முறையின் மூலம் மதிப்பிடப்படுகின்றன.
-        </p>
-
-    </div>
+        </div>
 
 
-    <!-- SCHOLARLY RESEARCH -->
+        <!-- DOUBLE BLIND -->
+        <div class="identity-card">
 
-    <div class="identity-card">
+            <div class="icon icon-review">👥</div>
 
-        <div class="icon">📚</div>
+            <h3>DOUBLE-BLIND PEER REVIEWED</h3>
+            <h4>இரட்டை மறைமுக மதிப்பாய்வு</h4>
 
-        <h3>SCHOLARLY RESEARCH</h3>
+            <p>
+                Manuscripts are evaluated through a
+                double-blind peer-review process by
+                qualified reviewers.
+            </p>
 
-        <h4>ஆய்வியல் வெளியீடு</h4>
+            <p>
+                ஆசிரியர் மற்றும் மதிப்பாய்வாளர் அடையாளங்கள்
+                மறைக்கப்பட்ட இரட்டை மறைமுக மதிப்பாய்வு
+                முறையின் மூலம் ஆய்வுகள் மதிப்பிடப்படுகின்றன.
+            </p>
 
-        <p>
-            A platform for scholarly research and academic
-            knowledge exchange.
-        </p>
-
-        <p class="tamil-text">
-            ஆய்வறிவு மற்றும் கல்விசார் கருத்துப் பரிமாற்றத்திற்கான
-            ஆய்வியல் தளம்.
-        </p>
-
-    </div>
-
-
-    <!-- INTERNATIONAL -->
-
-    <div class="identity-card">
-
-        <div class="icon">🌍</div>
-
-        <h3>INTERNATIONAL</h3>
-
-        <h4>சர்வதேச</h4>
-
-        <p>
-            Connecting Tamil studies research with the
-            wider international academic community.
-        </p>
-
-        <p class="tamil-text">
-            தமிழியல் ஆய்வுகளை உலகளாவிய கல்விசார்
-            சூழலுடன் இணைக்கும் தளம்.
-        </p>
-
-    </div>
+        </div>
 
 
-    <!-- PEER REVIEWED -->
+        <!-- SCHOLARLY RESEARCH -->
+        <div class="identity-card">
 
-    <div class="identity-card">
+            <div class="icon icon-research">📚</div>
 
-        <div class="icon">✓</div>
+            <h3>SCHOLARLY RESEARCH</h3>
+            <h4>ஆய்வியல் வெளியீடு</h4>
 
-        <h3>PEER-REVIEWED</h3>
+            <p>
+                Encouraging original, evidence-based and
+                academically significant research.
+            </p>
 
-        <h4>தர மதிப்பாய்வு செய்யப்பட்ட ஆய்விதழ்</h4>
+            <p>
+                புதிய, ஆதாரபூர்வமான மற்றும்
+                கல்வியியல் முக்கியத்துவம் வாய்ந்த
+                ஆய்வுகளை ஊக்குவிக்கும் வெளியீடு.
+            </p>
 
-        <p>
-            Research manuscripts undergo scholarly evaluation
-            before publication.
-        </p>
+        </div>
 
-        <p class="tamil-text">
-            ஆய்வுக் கட்டுரைகள் வெளியீட்டிற்கு முன்
-            கல்வியாளர்களால் மதிப்பாய்வு செய்யப்படுகின்றன.
-        </p>
+
+        <!-- INTERNATIONAL -->
+        <div class="identity-card">
+
+            <div class="icon icon-world">🌍</div>
+
+            <h3>INTERNATIONAL</h3>
+            <h4>சர்வதேச</h4>
+
+            <p>
+                Connecting Tamil studies research with
+                the wider global academic community.
+            </p>
+
+            <p>
+                தமிழியல் ஆய்வுகளை உலகளாவிய
+                கல்வியியல் சூழலுடன் இணைக்கும்
+                சர்வதேச ஆய்விதழ்.
+            </p>
+
+        </div>
+
+
+        <!-- PEER REVIEWED -->
+        <div class="identity-card">
+
+            <div class="icon icon-peer">✓</div>
+
+            <h3>PEER-REVIEWED</h3>
+            <h4>தர மதிப்பாய்வு செய்யப்பட்ட ஆய்விதழ்</h4>
+
+            <p>
+                Research manuscripts are assessed for
+                academic quality, originality and relevance.
+            </p>
+
+            <p>
+                ஆய்வுகளின் கல்வியியல் தரம், புதுமை மற்றும்
+                பொருத்தம் ஆகியவை மதிப்பாய்வு செய்யப்படுகின்றன.
+            </p>
+
+        </div>
 
     </div>
 
-</div>
+</section>
 
 
 <!-- JOURNAL PROFILE -->
-
 <section class="profile">
 
-    <h2>
+    <h2 class="section-title">
         Journal Profile
-        <br>
-        <span>இதழ் விவரம்</span>
     </h2>
-
 
     <div class="profile-grid">
 
-
-        <div class="profile-item">
-
-            <strong>Publisher / வெளியீட்டாளர்</strong>
-
-            <span>
-                Dr. T. Geethanjali, M.A., M.Phil., Ph.D., NET
-            </span>
-
+        <div class="profile-card">
+            <strong>Publisher:</strong><br>
+            Dr. T. Geethanjali
         </div>
 
-
-        <div class="profile-item">
-
-            <strong>Editor-in-Chief / முதன்மை ஆசிரியர்</strong>
-
-            <span>
-                Dr. T. Geethanjali
-            </span>
-
+        <div class="profile-card">
+            <strong>Editor-in-Chief:</strong><br>
+            Dr. T. Geethanjali
         </div>
 
-
-        <div class="profile-item">
-
-            <strong>Frequency / வெளியீட்டு கால அளவு</strong>
-
-            <span>
-                Quarterly / காலாண்டிதழ்
-            </span>
-
+        <div class="profile-card">
+            <strong>Frequency:</strong><br>
+            Quarterly
         </div>
 
-
-        <div class="profile-item">
-
-            <strong>Format / வடிவம்</strong>
-
-            <span>
-                Online E-Journal / இணைய மின்னிதழ்
-            </span>
-
+        <div class="profile-card">
+            <strong>Format:</strong><br>
+            Online E-Journal
         </div>
 
-
-        <div class="profile-item">
-
-            <strong>Place of Publication / வெளியீட்டு இடம்</strong>
-
-            <span>
-                Pollachi, Tamil Nadu, India
-            </span>
-
+        <div class="profile-card">
+            <strong>Place of Publication:</strong><br>
+            Pollachi, Tamil Nadu, India
         </div>
 
-
-        <div class="profile-item">
-
-            <strong>ISSN</strong>
-
-            <span>
-                To be assigned
-            </span>
-
+        <div class="profile-card">
+            <strong>ISSN:</strong><br>
+            To be assigned
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section>
+
+    <h2 class="section-title">
+        தமிழியல் பரிமாணங்கள்
+    </h2>
+
+    <div class="about-box">
+
+        <p>
+            <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
+            என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும்
+            தமிழியல் சார்ந்த பல்வேறு ஆய்வுத்துறைகளை ஒருங்கிணைக்கும்
+            சர்வதேசத் தரத்திலான மதிப்பாய்வு செய்யப்பட்ட காலாண்டு
+            மின்னிதழாகும்.
+        </p>
+
+        <p>
+            இவ்விதழ் புதிய ஆய்வுச் சிந்தனைகளை ஊக்குவித்தல்,
+            தரமான ஆய்வுகளை வெளியிடுதல் மற்றும் தமிழியல் ஆய்வாளர்களிடையே
+            கல்வியியல் பரிமாற்றத்தை வளர்த்தல் ஆகியவற்றை நோக்கமாகக் கொண்டுள்ளது.
+        </p>
+
+        <p>
+            <strong>Dimensions of Tamil Studies</strong> provides a scholarly
+            platform for researchers to communicate original research
+            and contribute to the development of Tamil studies in the
+            global academic environment.
+        </p>
 
     </div>
 
@@ -615,27 +637,26 @@ footer strong {
 
 
 <!-- FOOTER -->
-
 <footer>
 
     <p>
-        © 2026–2027 <strong>Dimensions of Tamil Studies</strong>
+        © 2026 தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)
     </p>
 
     <p>
-        Publisher: Dr. T. Geethanjali, M.A., M.Phil., Ph.D., NET
-    </p>
-
-    <p>
-        தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies
+        International Peer-Reviewed Quarterly E-Journal
     </p>
 
     <p>
         Pollachi, Tamil Nadu, India
     </p>
 
-</footer>
+    <p>
+        Email:
+        t.geethanjalingmc@gmail.com
+    </p>
 
+</footer>
 
 </body>
 </html>
