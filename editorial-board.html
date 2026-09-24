@@ -1,120 +1,200 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Editorial Board | தமிழியல் பரிமாணங்கள்</title>
-<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர், ஆசிரியர் குழு மற்றும் ஆலோசனைக் குழு உறுப்பினர்கள் பற்றிய தகவல்கள்.">
+
+    <meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர், ஆசிரியர் குழு மற்றும் ஆலோசனைக் குழு உறுப்பினர்கள் பற்றிய தகவல்கள்.">
+
     <style>
-        body {
-            margin: 0;
-            font-family: "Noto Sans Tamil", Arial, sans-serif;
-            background: #f7f4fb;
-            color: #333;
+        *{
+            box-sizing:border-box;
         }
 
-        header {
-            background: linear-gradient(135deg, #5b247a, #1bcedf);
-            color: white;
-            text-align: center;
-            padding: 35px 20px;
+        body{
+            margin:0;
+            font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+            background:#f5f7fb;
+            color:#263238;
+            line-height:1.7;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
+        header{
+            background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+            color:white;
+            text-align:center;
+            padding:22px 20px 17px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.15);
         }
 
-        header p {
-            margin: 8px 0 0;
-            font-size: 17px;
+        header h1{
+            margin:0 0 2px;
+            font-size:32px;
+            font-weight:700;
         }
 
-        nav {
-            background: #3f1763;
-            text-align: center;
-            padding: 14px 5px;
+        header p{
+            margin:3px 0;
+            font-size:16px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 15px;
+        header p:last-child{
+            color:#e0e7ff;
+            font-weight:600;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        nav{
+            background:#fff;
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:4px;
+            padding:8px 10px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+            position:sticky;
+            top:0;
+            z-index:100;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
+        nav a{
+            color:#312e81;
+            text-decoration:none;
+            padding:7px 12px;
+            border-radius:20px;
+            font-size:14px;
+            font-weight:600;
         }
 
-        .section-title {
-            text-align: center;
-            color: #5b247a;
-            font-size: 28px;
-            margin-bottom: 30px;
+        nav a:hover{
+            background:#312e81;
+            color:white;
         }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        .container{
+            width:92%;
+            max-width:1150px;
+            margin:0 auto;
+            padding:28px 0;
         }
 
-        .card h2 {
-            color: #5b247a;
-            margin-top: 0;
-            font-size: 22px;
+        .section-title{
+            text-align:center;
+            color:#312e81;
+            font-size:28px;
+            margin:0 0 18px;
         }
 
-        .member {
-            border-left: 5px solid #5b247a;
-            background: #faf8fd;
-            padding: 18px 20px;
-            margin: 15px 0;
-            border-radius: 8px;
+        .card{
+            background:white;
+            padding:22px;
+            margin-bottom:12px;
+            border-radius:14px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.07);
+            border-top:4px solid #312e81;
         }
 
-        .member h3 {
-            margin: 0 0 8px;
-            color: #3f1763;
-            font-size: 19px;
+        .card h2{
+            color:#312e81;
+            margin:0 0 10px;
+            font-size:25px;
         }
 
-        .member p {
-            margin: 5px 0;
-            line-height: 1.7;
+        .member{
+            border-left:4px solid #4c1d95;
+            background:#fafaff;
+            padding:14px 17px;
+            margin:10px 0;
+            border-radius:9px;
         }
 
-        footer {
-            background: #3f1763;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
+        .member:last-child{
+            margin-bottom:0;
         }
 
-        footer p {
-            margin: 6px 0;
+        .member h3{
+            margin:0 0 6px;
+            color:#312e81;
+            font-size:19px;
         }
 
-        @media (max-width: 700px) {
+        .member p{
+            margin:4px 0;
+            line-height:1.7;
+        }
 
-            nav a {
-                display: inline-block;
-                margin: 6px 8px;
+        footer{
+            background:#172554;
+            color:white;
+            text-align:center;
+            padding:22px 15px;
+            margin-top:10px;
+            line-height:1.7;
+        }
+
+        footer strong{
+            font-size:17px;
+        }
+
+        footer p{
+            margin:4px 0;
+        }
+
+        @media(max-width:700px){
+
+            header{
+                padding:20px 15px 15px;
             }
 
-            header h1 {
-                font-size: 26px;
+            header h1{
+                font-size:26px;
+            }
+
+            header p{
+                font-size:14px;
+            }
+
+            nav{
+                padding:7px 6px;
+                gap:3px;
+            }
+
+            nav a{
+                font-size:13px;
+                padding:6px 10px;
+            }
+
+            .container{
+                width:94%;
+                padding:22px 0;
+            }
+
+            .section-title{
+                font-size:23px;
+                margin-bottom:14px;
+            }
+
+            .card{
+                padding:17px;
+                margin-bottom:10px;
+            }
+
+            .card h2{
+                font-size:22px;
+            }
+
+            .member{
+                padding:12px 14px;
+            }
+
+            .member h3{
+                font-size:17px;
+            }
+
+            footer{
+                padding:20px 12px;
+                font-size:14px;
             }
         }
     </style>
@@ -131,7 +211,7 @@
 <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="aims-scope.html">Aims & Scope</a>
+    <a href="aims-scope.html">Aims &amp; Scope</a>
     <a href="editorial-board.html">Editorial Board</a>
     <a href="author-guidelines.html">Author Guidelines</a>
     <a href="peer-review.html">Peer Review</a>
@@ -143,7 +223,7 @@
 <div class="container">
 
     <h1 class="section-title">
-        Editorial Board & Advisory Committee
+        Editorial Board &amp; Advisory Committee
     </h1>
 
     <!-- Editor-in-Chief -->
