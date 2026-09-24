@@ -1,217 +1,289 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Submission Process | தமிழியல் பரிமாணங்கள்</title>
-<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆய்வுக் கட்டுரை சமர்ப்பிப்பு, முதற்கட்ட ஆசிரியர் பரிசீலனை, சக மதிப்பாய்வு, திருத்தம், இறுதி ஆசிரியர் முடிவு மற்றும் வெளியீட்டு செயல்முறை பற்றிய தகவல்கள்.">
+
+<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆய்வுக் கட்டுரை சமர்ப்பிப்பு, ஆசிரியர் பரிசீலனை, சக மதிப்பாய்வு, திருத்தம், இறுதி முடிவு மற்றும் வெளியீட்டு செயல்முறை.">
+
 <style>
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f5f3fa;
-    color: #333;
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-header {
-    background: linear-gradient(135deg, #6a1b9a, #00897b);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+header h1{
+    margin:0 0 2px;
+    font-size:32px;
+    font-weight:700;
 }
 
-header h2 {
-    margin: 8px 0;
-    font-size: 22px;
+header h2{
+    margin:2px 0;
+    font-size:19px;
+    font-weight:500;
 }
 
-header p {
-    margin: 6px 0;
+header p{
+    margin:3px 0;
+    font-size:16px;
 }
 
-nav {
-    background: #3f1766;
-    text-align: center;
-    padding: 13px 5px;
+header p:last-child{
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 9px;
-    font-size: 15px;
+nav{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:8px 10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a{
+    color:#312e81;
+    text-decoration:none;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
 
-.container {
-    max-width: 950px;
-    margin: 35px auto;
-    padding: 0 20px;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
-.intro {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-.intro h2 {
-    color: #6a1b9a;
-    margin-top: 0;
+.intro,
+.step,
+.note{
+    background:white;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.07);
 }
 
-.intro p {
-    line-height: 1.8;
+.intro{
+    padding:22px;
+    margin-bottom:15px;
+    border-top:4px solid #312e81;
 }
 
-.timeline {
-    position: relative;
+.intro h2{
+    color:#312e81;
+    margin:0 0 10px;
+    font-size:22px;
 }
 
-.step {
-    position: relative;
-    background: white;
-    padding: 25px 28px;
-    margin-bottom: 45px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    border-left: 6px solid #6a1b9a;
+.intro p{
+    margin:0 0 10px;
 }
 
-.step-number {
-    position: absolute;
-    left: -23px;
-    top: 22px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #6a1b9a;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
+.timeline{
+    position:relative;
 }
 
-.step h2 {
-    color: #6a1b9a;
-    margin: 0 0 12px 25px;
+.step{
+    position:relative;
+    padding:20px 22px 20px 65px;
+    margin-bottom:12px;
+    border-left:5px solid #312e81;
 }
 
-.step p {
-    line-height: 1.8;
+.step-number{
+    position:absolute;
+    left:-20px;
+    top:20px;
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    background:#312e81;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+    font-size:17px;
 }
 
-.status {
-    display: inline-block;
-    background: #f0eafa;
-    color: #6a1b9a;
-    padding: 8px 14px;
-    border-radius: 20px;
-    font-weight: bold;
-    margin-top: 8px;
+.step h2{
+    color:#312e81;
+    margin:0 0 8px;
+    font-size:20px;
 }
 
-.outcomes {
-    background: #e8f5f3;
-    padding: 15px 20px;
-    border-left: 5px solid #00897b;
-    border-radius: 8px;
-    margin-top: 15px;
+.step p{
+    margin:0 0 9px;
 }
 
-.arrow {
-    text-align: center;
-    color: #00897b;
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: -28px;
-    margin-bottom: 15px;
+.status{
+    display:inline-block;
+    background:#eef2ff;
+    color:#312e81;
+    padding:5px 12px;
+    border-radius:18px;
+    font-weight:700;
+    font-size:14px;
 }
 
-.note {
-    background: #fff8e1;
-    padding: 22px;
-    border-left: 5px solid #f9a825;
-    border-radius: 8px;
-    line-height: 1.8;
-    margin-top: 10px;
+.arrow{
+    text-align:center;
+    color:#4c1d95;
+    font-size:22px;
+    font-weight:bold;
+    line-height:1;
+    margin:0 0 7px;
 }
 
-.button-box {
-    text-align: center;
-    margin: 30px 0;
+.outcomes{
+    background:#f5f3ff;
+    padding:12px 16px;
+    border-left:4px solid #4c1d95;
+    border-radius:8px;
+    margin:10px 0;
 }
 
-.button {
-    display: inline-block;
-    background: #6a1b9a;
-    color: white;
-    padding: 12px 22px;
-    border-radius: 7px;
-    text-decoration: none;
-    margin: 5px;
+.outcomes p{
+    margin:3px 0;
 }
 
-.button:hover {
-    background: #4a126c;
+.note{
+    padding:20px 22px;
+    border-left:5px solid #d97706;
+    margin-top:16px;
+    background:#fffaf0;
 }
 
-footer {
-    background: #3f1766;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
+.note strong{
+    color:#92400e;
 }
 
-footer p {
-    margin: 6px 0;
+.note p{
+    margin:8px 0;
 }
 
-@media (max-width: 700px) {
+.button-box{
+    text-align:center;
+    margin:22px 0 8px;
+}
 
-    header h1 {
-        font-size: 26px;
+.button{
+    display:inline-block;
+    background:#312e81;
+    color:white;
+    padding:10px 18px;
+    border-radius:7px;
+    text-decoration:none;
+    margin:4px;
+    font-weight:600;
+}
+
+.button:hover{
+    background:#4c1d95;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
+}
+
+footer p{
+    margin:4px 0;
+}
+
+footer strong{
+    font-size:17px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
     }
 
-    header h2 {
-        font-size: 19px;
+    header h1{
+        font-size:26px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 6px;
+    header h2{
+        font-size:18px;
     }
 
-    .container {
-        padding: 0 15px;
+    header p{
+        font-size:14px;
     }
 
-    .step {
-        padding: 22px;
-        border-left: 5px solid #6a1b9a;
+    nav{
+        padding:7px 6px;
+        gap:3px;
     }
 
-    .step-number {
-        position: static;
-        margin-bottom: 12px;
+    nav a{
+        font-size:13px;
+        padding:6px 10px;
     }
 
-    .step h2 {
-        margin-left: 0;
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .intro,
+    .step,
+    .note{
+        padding:17px;
+    }
+
+    .step{
+        padding-left:52px;
+    }
+
+    .step-number{
+        left:-18px;
+        top:18px;
+        width:35px;
+        height:35px;
+    }
+
+    .step h2{
+        font-size:19px;
+    }
+
+    footer{
+        padding:20px 12px;
+        font-size:14px;
     }
 }
 </style>
@@ -231,7 +303,6 @@ footer p {
 
 </header>
 
-
 <nav>
 
     <a href="index.html">Home</a>
@@ -249,9 +320,7 @@ footer p {
 
 </nav>
 
-
 <div class="container">
-
 
     <div class="intro">
 
@@ -275,11 +344,7 @@ footer p {
 
     </div>
 
-
     <div class="timeline">
-
-
-        <!-- STEP 1 -->
 
         <div class="step">
 
@@ -299,11 +364,7 @@ footer p {
 
         </div>
 
-
         <div class="arrow">↓</div>
-
-
-        <!-- STEP 2 -->
 
         <div class="step">
 
@@ -325,11 +386,7 @@ footer p {
 
         </div>
 
-
         <div class="arrow">↓</div>
-
-
-        <!-- STEP 3 -->
 
         <div class="step">
 
@@ -357,11 +414,7 @@ footer p {
 
         </div>
 
-
         <div class="arrow">↓</div>
-
-
-        <!-- STEP 4 -->
 
         <div class="step">
 
@@ -388,11 +441,7 @@ footer p {
 
         </div>
 
-
         <div class="arrow">↓</div>
-
-
-        <!-- STEP 5 -->
 
         <div class="step">
 
@@ -411,17 +460,11 @@ footer p {
 
                 <strong>Possible Outcomes:</strong>
 
-                <p>
-                    ✓ Accepted – ஏற்றுக்கொள்ளப்பட்டது
-                </p>
+                <p>✓ Accepted – ஏற்றுக்கொள்ளப்பட்டது</p>
 
-                <p>
-                    ✓ Revision Required – திருத்தம் தேவை
-                </p>
+                <p>✓ Revision Required – திருத்தம் தேவை</p>
 
-                <p>
-                    ✓ Rejected – நிராகரிக்கப்பட்டது
-                </p>
+                <p>✓ Rejected – நிராகரிக்கப்பட்டது</p>
 
             </div>
 
@@ -431,11 +474,7 @@ footer p {
 
         </div>
 
-
         <div class="arrow">↓</div>
-
-
-        <!-- STEP 6 -->
 
         <div class="step">
 
@@ -454,9 +493,7 @@ footer p {
 
         </div>
 
-
     </div>
-
 
     <div class="note">
 
@@ -481,7 +518,6 @@ footer p {
 
     </div>
 
-
     <div class="button-box">
 
         <a href="author-guidelines.html" class="button">
@@ -494,9 +530,7 @@ footer p {
 
     </div>
 
-
 </div>
-
 
 <footer>
 
