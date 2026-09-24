@@ -1,129 +1,333 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About – தமிழியல் பரிமாணங்கள்</title>
+<title>About – தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies</title>
+
 <meta name="description" content="தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies) பற்றிய தகவல்கள், வெளியீட்டு விவரங்கள், ஆசிரியர் மற்றும் சர்வதேச சக மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழின் நோக்கங்கள்.">
+
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f5f3fa;
+    font-family: "Noto Sans Tamil", "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #f7f3fb 0%, #eef8f6 100%);
     color: #333;
 }
+
+/* HEADER */
 
 header {
     background: linear-gradient(135deg, #6a1b9a, #00897b);
     color: white;
     text-align: center;
-    padding: 35px 20px;
+    padding: 38px 20px 32px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
 }
 
 header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
-header p {
-    margin: 8px 0 0;
-    font-size: 16px;
+header .english-title {
+    margin: 7px 0 5px;
+    font-size: 20px;
+    font-weight: 600;
 }
+
+header .journal-type {
+    margin: 8px 0 0;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* NAVIGATION */
 
 nav {
     background: #3b145f;
     text-align: center;
-    padding: 12px 8px;
+    padding: 13px 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 5px 10px;
-    font-size: 15px;
+    margin: 4px 5px;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.25s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: #00897b;
+    color: white;
 }
 
+/* MAIN CONTAINER */
+
 .container {
-    max-width: 950px;
-    margin: 35px auto;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+/* PAGE INTRO */
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-h2 {
+.page-intro h2 {
+    color: #6a1b9a;
+    font-size: 30px;
+    margin: 0 0 8px;
+}
+
+.page-intro p {
+    color: #555;
+    margin: 0;
+    font-size: 15px;
+}
+
+/* CARDS */
+
+.card {
+    background: rgba(255,255,255,0.96);
+    padding: 30px;
+    margin-bottom: 28px;
+    border-radius: 18px;
+    border-top: 5px solid #6a1b9a;
+    box-shadow: 0 5px 20px rgba(61,20,95,0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(61,20,95,0.15);
+}
+
+.card h2 {
     color: #6a1b9a;
     margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 23px;
 }
 
-p {
-    line-height: 1.8;
+.card h2::after {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 3px;
+    margin-top: 8px;
+    background: #00897b;
+    border-radius: 5px;
+}
+
+.card p {
+    line-height: 1.9;
+    margin: 0 0 15px;
+    text-align: justify;
+}
+
+.card p:last-child {
+    margin-bottom: 0;
+}
+
+/* HIGHLIGHT BOXES */
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 22px;
+}
+
+.highlight {
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f1e7f8, #e5f6f3);
+    border: 1px solid #e1d4eb;
+}
+
+.highlight .icon {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.highlight strong {
+    display: block;
+    color: #5b177f;
+    font-size: 15px;
+}
+
+.highlight span {
+    display: block;
+    color: #555;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* TABLE */
+
+.table-wrapper {
+    overflow-x: auto;
 }
 
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #ddd;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
+th,
+td {
+    padding: 14px 15px;
+    border-bottom: 1px solid #e3e3e3;
     text-align: left;
+    line-height: 1.6;
 }
 
 th {
+    width: 34%;
     background: #eee7f7;
     color: #4a176d;
+    font-weight: 700;
 }
+
+td {
+    background: #ffffff;
+}
+
+tr:last-child th,
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* COMMITMENT */
+
+.commitment-box {
+    background: linear-gradient(135deg, #f3eafa, #e8f8f5);
+    border-left: 6px solid #00897b;
+    padding: 22px 24px;
+    border-radius: 12px;
+}
+
+.commitment-box p {
+    margin: 0;
+}
+
+/* FOOTER */
 
 footer {
     background: #3b145f;
     color: white;
     text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
-    line-height: 1.7;
+    padding: 30px 15px;
+    margin-top: 50px;
+    line-height: 1.8;
 }
 
+footer strong {
+    font-size: 18px;
+}
+
+footer .footer-subtitle {
+    color: #d9c8e8;
+}
+
+/* MOBILE */
+
 @media (max-width: 700px) {
+
+    header {
+        padding: 30px 15px 25px;
+    }
+
     header h1 {
-        font-size: 25px;
+        font-size: 26px;
+    }
+
+    header .english-title {
+        font-size: 17px;
+    }
+
+    header .journal-type {
+        font-size: 13px;
+    }
+
+    nav {
+        padding: 10px 7px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px;
+        font-size: 13px;
+        padding: 6px 8px;
+        margin: 3px;
+    }
+
+    .container {
+        margin: 28px auto;
+        padding: 0 14px;
+    }
+
+    .page-intro h2 {
+        font-size: 25px;
     }
 
     .card {
-        padding: 20px;
+        padding: 22px 18px;
+        border-radius: 15px;
     }
 
-    table {
+    .card h2 {
+        font-size: 21px;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 11px;
         font-size: 14px;
     }
+
+    th {
+        width: 38%;
+    }
 }
+
 </style>
+
 </head>
 
 <body>
 
 <header>
     <h1>தமிழியல் பரிமாணங்கள்</h1>
-    <p>Dimensions of Tamil Studies</p>
-    <p>An International Peer-Reviewed Quarterly E-Journal</p>
+    <div class="english-title">Dimensions of Tamil Studies</div>
+    <div class="journal-type">An International Peer-Reviewed Quarterly E-Journal</div>
 </header>
 
 <nav>
@@ -143,34 +347,64 @@ footer {
 
 <div class="container">
 
-    <div class="card">
-        <h2>இதழைப் பற்றி</h2>
+```
+<div class="page-intro">
+    <h2>About the Journal</h2>
+    <p>தமிழியல் பரிமாணங்கள் – Dimensions of Tamil Studies</p>
+</div>
 
-        <p>
-            <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
-            என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல்
-            சார்ந்த பல்வேறு ஆய்வுத்துறைகளை உள்ளடக்கிய சர்வதேச சக மதிப்பாய்வு
-            செய்யப்பட்ட காலாண்டு மின்னிதழாகும்.
-        </p>
+<div class="card">
+    <h2>இதழைப் பற்றி</h2>
 
-        <p>
-            தமிழியல் சார்ந்த புதிய ஆய்வுச் சிந்தனைகளையும் அறிவியல் நோக்கிலான
-            ஆய்வுகளையும் ஊக்குவிப்பதும், ஆய்வாளர்கள் மற்றும் கல்வியாளர்களிடையே
-            அறிவியல் சார்ந்த கருத்துப் பரிமாற்றத்தை மேம்படுத்துவதும் இவ்விதழின்
-            முக்கிய நோக்கங்களாகும்.
-        </p>
+    <p>
+        <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
+        என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல்
+        சார்ந்த பல்வேறு ஆய்வுத்துறைகளை உள்ளடக்கிய சர்வதேச சக மதிப்பாய்வு
+        செய்யப்பட்ட காலாண்டு மின்னிதழாகும்.
+    </p>
 
-        <p>
-            தமிழ் ஆய்வுகளை உலகளாவிய கல்வியியல் சூழலுடன் இணைத்து,
-            தரமான ஆய்வுக் கட்டுரைகளை வெளியிடுவதற்கான கல்வியியல் தளமாக
-            இம்மின்னிதழ் செயல்படுகிறது.
-        </p>
+    <p>
+        தமிழியல் சார்ந்த புதிய ஆய்வுச் சிந்தனைகளையும் அறிவியல் நோக்கிலான
+        ஆய்வுகளையும் ஊக்குவிப்பதும், ஆய்வாளர்கள் மற்றும் கல்வியாளர்களிடையே
+        அறிவியல் சார்ந்த கருத்துப் பரிமாற்றத்தை மேம்படுத்துவதும் இவ்விதழின்
+        முக்கிய நோக்கங்களாகும்.
+    </p>
+
+    <p>
+        தமிழ் ஆய்வுகளை உலகளாவிய கல்வியியல் சூழலுடன் இணைத்து,
+        தரமான ஆய்வுக் கட்டுரைகளை வெளியிடுவதற்கான கல்வியியல் தளமாக
+        இம்மின்னிதழ் செயல்படுகிறது.
+    </p>
+
+    <div class="highlight-grid">
+
+        <div class="highlight">
+            <div class="icon">📖</div>
+            <strong>OPEN ACCESS</strong>
+            <span>திறந்த அணுகல்</span>
+        </div>
+
+        <div class="highlight">
+            <div class="icon">🌐</div>
+            <strong>MULTIDISCIPLINARY</strong>
+            <span>பன்முகத்துறை</span>
+        </div>
+
+        <div class="highlight">
+            <div class="icon">🔎</div>
+            <strong>DOUBLE BLIND PEER REVIEW</strong>
+            <span>இரட்டை மறை மதிப்பாய்வு</span>
+        </div>
+
     </div>
+</div>
 
-    <div class="card">
-        <h2>Publication Details</h2>
+<div class="card">
+    <h2>Publication Details</h2>
 
+    <div class="table-wrapper">
         <table>
+
             <tr>
                 <th>Journal Name</th>
                 <td>தமிழியல் பரிமாணங்கள்</td>
@@ -215,24 +449,29 @@ footer {
                 <th>Place</th>
                 <td>Pollachi, Tamil Nadu, India</td>
             </tr>
+
         </table>
     </div>
+</div>
 
-    <div class="card">
-        <h2>Our Commitment</h2>
+<div class="card">
+    <h2>Our Commitment</h2>
 
+    <div class="commitment-box">
         <p>
             இவ்விதழ் ஆய்வின் தரம், கல்வியியல் நேர்மை, அறிவுசார் பொறுப்பு,
             வெளிப்படையான மதிப்பாய்வு மற்றும் ஆய்வாளர்களின் பங்களிப்பு
             ஆகியவற்றை அடிப்படையாகக் கொண்டு செயல்படுகிறது.
         </p>
     </div>
+</div>
+```
 
 </div>
 
 <footer>
     <strong>தமிழியல் பரிமாணங்கள்</strong><br>
-    Dimensions of Tamil Studies<br>
+    <span class="footer-subtitle">Dimensions of Tamil Studies</span><br>
     An International Peer-Reviewed Quarterly E-Journal<br>
     © 2026 | Pollachi, Tamil Nadu, India
 </footer>
