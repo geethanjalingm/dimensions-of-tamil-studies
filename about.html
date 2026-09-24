@@ -5,317 +5,327 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About – தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies</title>
+<title>About | தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies</title>
 
-<meta name="description" content="தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies) பற்றிய தகவல்கள், வெளியீட்டு விவரங்கள், ஆசிரியர் மற்றும் சர்வதேச சக மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழின் நோக்கங்கள்.">
+<meta name="description" content="தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies) பற்றிய தகவல்கள், வெளியீட்டு விவரங்கள் மற்றும் சர்வதேச சக மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழின் நோக்கங்கள்.">
 
 <style>
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(180deg, #f7f3fb 0%, #eef8f6 100%);
-    color: #333;
+body{
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
-header {
-    background: linear-gradient(135deg, #6a1b9a, #00897b);
-    color: white;
-    text-align: center;
-    padding: 38px 20px 32px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:28px 20px 22px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
+.logo{
+    width:85px;
+    height:85px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+    margin-bottom:10px;
 }
 
-header .english-title {
-    margin: 7px 0 5px;
-    font-size: 20px;
-    font-weight: 600;
+header h1{
+    font-size:32px;
+    margin-bottom:2px;
+    font-weight:700;
 }
 
-header .journal-type {
-    margin: 8px 0 0;
-    font-size: 15px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
+header h2{
+    font-size:21px;
+    font-weight:500;
+    margin-bottom:7px;
 }
 
-/* NAVIGATION */
-
-nav {
-    background: #3b145f;
-    text-align: center;
-    padding: 13px 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+.header-tagline{
+    font-size:16px;
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 4px 5px;
-    padding: 7px 10px;
-    border-radius: 20px;
-    font-size: 14px;
-    transition: all 0.25s ease;
+/* ================= NAVIGATION ================= */
+
+nav{
+    background:#ffffff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:5px;
+    padding:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a:hover {
-    background: #00897b;
-    color: white;
+nav a{
+    text-decoration:none;
+    color:#312e81;
+    padding:8px 13px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
+    transition:0.3s;
 }
 
-/* MAIN CONTAINER */
-
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
-/* PAGE INTRO */
+/* ================= PAGE HERO ================= */
 
-.page-intro {
-    text-align: center;
-    margin-bottom: 30px;
+.page-hero{
+    background:linear-gradient(135deg,#eef2ff,#faf5ff);
+    padding:45px 20px;
+    text-align:center;
 }
 
-.page-intro h2 {
-    color: #6a1b9a;
-    font-size: 30px;
-    margin: 0 0 8px;
+.page-hero h3{
+    color:#312e81;
+    font-size:30px;
+    margin-bottom:7px;
 }
 
-.page-intro p {
-    color: #555;
-    margin: 0;
-    font-size: 15px;
+.page-hero p{
+    color:#555;
+    font-size:17px;
 }
 
-/* CARDS */
+/* ================= CONTAINER ================= */
 
-.card {
-    background: rgba(255,255,255,0.96);
-    padding: 30px;
-    margin-bottom: 28px;
-    border-radius: 18px;
-    border-top: 5px solid #6a1b9a;
-    box-shadow: 0 5px 20px rgba(61,20,95,0.10);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
 }
 
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(61,20,95,0.15);
+/* ================= SECTIONS ================= */
+
+.section{
+    padding:42px 0;
 }
 
-.card h2 {
-    color: #6a1b9a;
-    margin-top: 0;
-    margin-bottom: 18px;
-    font-size: 23px;
+.section-title{
+    text-align:center;
+    color:#312e81;
+    font-size:27px;
+    margin-bottom:8px;
 }
 
-.card h2::after {
-    content: "";
-    display: block;
-    width: 55px;
-    height: 3px;
-    margin-top: 8px;
-    background: #00897b;
-    border-radius: 5px;
+.section-subtitle{
+    text-align:center;
+    color:#666;
+    margin-bottom:28px;
 }
 
-.card p {
-    line-height: 1.9;
-    margin: 0 0 15px;
-    text-align: justify;
+/* ================= ABOUT CARD ================= */
+
+.about-card{
+    background:white;
+    padding:32px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border-top:4px solid #4f46e5;
 }
 
-.card p:last-child {
-    margin-bottom: 0;
+.about-card p{
+    margin-bottom:16px;
+    text-align:justify;
 }
 
-/* HIGHLIGHT BOXES */
-
-.highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 22px;
+.about-card p:last-child{
+    margin-bottom:0;
 }
 
-.highlight {
-    padding: 20px 15px;
-    text-align: center;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #f1e7f8, #e5f6f3);
-    border: 1px solid #e1d4eb;
+.about-card strong{
+    color:#312e81;
 }
 
-.highlight .icon {
-    font-size: 27px;
-    margin-bottom: 8px;
+/* ================= HIGHLIGHTS ================= */
+
+.highlight-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
 }
 
-.highlight strong {
-    display: block;
-    color: #5b177f;
-    font-size: 15px;
+.highlight-card{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    border-top:4px solid #4f46e5;
+    text-align:center;
 }
 
-.highlight span {
-    display: block;
-    color: #555;
-    font-size: 13px;
-    margin-top: 5px;
+.highlight-card .icon{
+    width:55px;
+    height:55px;
+    margin:0 auto 12px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:27px;
 }
 
-/* TABLE */
+.icon-purple{background:#ede9fe;}
+.icon-blue{background:#dbeafe;}
+.icon-green{background:#dcfce7;}
 
-.table-wrapper {
-    overflow-x: auto;
+.highlight-card h4{
+    color:#312e81;
+    margin-bottom:5px;
 }
 
-table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    margin-top: 10px;
-    overflow: hidden;
-    border-radius: 12px;
-    border: 1px solid #ddd;
+.highlight-card p{
+    font-size:14px;
+    color:#555;
+}
+
+/* ================= PUBLICATION DETAILS ================= */
+
+.details-box{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+}
+
+.table-wrapper{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
 }
 
 th,
-td {
-    padding: 14px 15px;
-    border-bottom: 1px solid #e3e3e3;
-    text-align: left;
-    line-height: 1.6;
+td{
+    padding:14px 15px;
+    border-bottom:1px solid #e5e7eb;
+    text-align:left;
 }
 
-th {
-    width: 34%;
-    background: #eee7f7;
-    color: #4a176d;
-    font-weight: 700;
+th{
+    width:34%;
+    background:#eef2ff;
+    color:#312e81;
 }
 
-td {
-    background: #ffffff;
+td{
+    background:#ffffff;
 }
 
 tr:last-child th,
-tr:last-child td {
-    border-bottom: none;
+tr:last-child td{
+    border-bottom:none;
 }
 
-/* COMMITMENT */
+/* ================= COMMITMENT ================= */
 
-.commitment-box {
-    background: linear-gradient(135deg, #f3eafa, #e8f8f5);
-    border-left: 6px solid #00897b;
-    padding: 22px 24px;
-    border-radius: 12px;
+.commitment-box{
+    background:linear-gradient(135deg,#eef2ff,#f5f3ff);
+    padding:30px;
+    border-radius:16px;
+    border:1px solid #ddd6fe;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+    text-align:center;
 }
 
-.commitment-box p {
-    margin: 0;
+.commitment-box p{
+    max-width:900px;
+    margin:auto;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
-footer {
-    background: #3b145f;
-    color: white;
-    text-align: center;
-    padding: 30px 15px;
-    margin-top: 50px;
-    line-height: 1.8;
+footer{
+    background:#111827;
+    color:#d1d5db;
+    text-align:center;
+    padding:28px 15px;
+    margin-top:20px;
 }
 
-footer strong {
-    font-size: 18px;
+footer strong{
+    color:white;
 }
 
-footer .footer-subtitle {
-    color: #d9c8e8;
+footer p{
+    margin:4px 0;
+    font-size:14px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
-@media (max-width: 700px) {
+@media(max-width:600px){
 
-    header {
-        padding: 30px 15px 25px;
+    header h1{
+        font-size:26px;
     }
 
-    header h1 {
-        font-size: 26px;
+    header h2{
+        font-size:18px;
     }
 
-    header .english-title {
-        font-size: 17px;
+    .header-tagline{
+        font-size:13px;
     }
 
-    header .journal-type {
-        font-size: 13px;
+    nav{
+        position:static;
     }
 
-    nav {
-        padding: 10px 7px;
+    nav a{
+        font-size:13px;
+        padding:6px 9px;
     }
 
-    nav a {
-        font-size: 13px;
-        padding: 6px 8px;
-        margin: 3px;
+    .page-hero h3{
+        font-size:24px;
     }
 
-    .container {
-        margin: 28px auto;
-        padding: 0 14px;
+    .section{
+        padding:32px 0;
     }
 
-    .page-intro h2 {
-        font-size: 25px;
-    }
-
-    .card {
-        padding: 22px 18px;
-        border-radius: 15px;
-    }
-
-    .card h2 {
-        font-size: 21px;
-    }
-
-    .highlight-grid {
-        grid-template-columns: 1fr;
+    .about-card,
+    .details-box{
+        padding:22px 18px;
     }
 
     th,
-    td {
-        padding: 11px;
-        font-size: 14px;
+    td{
+        padding:11px;
+        font-size:14px;
     }
 
-    th {
-        width: 38%;
+    th{
+        width:38%;
     }
+
 }
 
 </style>
@@ -324,37 +334,74 @@ footer .footer-subtitle {
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
-    <h1>தமிழியல் பரிமாணங்கள்</h1>
-    <div class="english-title">Dimensions of Tamil Studies</div>
-    <div class="journal-type">An International Peer-Reviewed Quarterly E-Journal</div>
+
+```
+<img src="logo.png.png"
+     alt="தமிழியல் பரிமாணங்கள் Logo"
+     class="logo">
+
+<h1>தமிழியல் பரிமாணங்கள்</h1>
+
+<h2>Dimensions of Tamil Studies</h2>
+
+<div class="header-tagline">
+    அறிஞர்களால் மதிப்பீடு செய்யப்படும் காலாண்டு சர்வதேசத் தமிழ் ஆய்விதழ்
+    <br>
+    Peer-Reviewed Quarterly International Journal of Tamil Studies
+</div>
+```
+
 </header>
 
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="aims-scope.html">Aims &amp; Scope</a>
-    <a href="editorial-board.html">Editorial Board</a>
-    <a href="author-guidelines.html">Author Guidelines</a>
-    <a href="peer-review.html">Peer Review</a>
-    <a href="ethics.html">Publication Ethics</a>
-    <a href="archives.html">Archives</a>
-    <a href="contact.html">Contact</a>
-    <a href="call-for-papers.html">Call for Papers</a>
-    <a href="submit-article.html">Submit Article</a>
-    <a href="submission-process.html">Submission Process</a>
+
+```
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="aims.html">Aims &amp; Scope</a>
+<a href="editorial.html">Editorial Board</a>
+<a href="guidelines.html">Author Guidelines</a>
+<a href="peer-review.html">Peer Review</a>
+<a href="ethics.html">Publication Ethics</a>
+<a href="archives.html">Archives</a>
+<a href="contact.html">Contact</a>
+```
+
 </nav>
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+```
+<div class="container">
+
+    <h3>About the Journal</h3>
+
+    <p>இதழைப் பற்றி | தமிழியல் பரிமாணங்கள்</p>
+
+</div>
+```
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="section">
 
 <div class="container">
 
 ```
-<div class="page-intro">
-    <h2>About the Journal</h2>
-    <p>தமிழியல் பரிமாணங்கள் – Dimensions of Tamil Studies</p>
-</div>
+<div class="about-card">
 
-<div class="card">
-    <h2>இதழைப் பற்றி</h2>
+    <h2 class="section-title">
+        இதழைப் பற்றி
+    </h2>
 
     <p>
         <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
@@ -376,33 +423,97 @@ footer .footer-subtitle {
         இம்மின்னிதழ் செயல்படுகிறது.
     </p>
 
-    <div class="highlight-grid">
+</div>
+```
 
-        <div class="highlight">
-            <div class="icon">📖</div>
-            <strong>OPEN ACCESS</strong>
-            <span>திறந்த அணுகல்</span>
-        </div>
-
-        <div class="highlight">
-            <div class="icon">🌐</div>
-            <strong>MULTIDISCIPLINARY</strong>
-            <span>பன்முகத்துறை</span>
-        </div>
-
-        <div class="highlight">
-            <div class="icon">🔎</div>
-            <strong>DOUBLE BLIND PEER REVIEW</strong>
-            <span>இரட்டை மறை மதிப்பாய்வு</span>
-        </div>
-
-    </div>
 </div>
 
-<div class="card">
-    <h2>Publication Details</h2>
+</section>
+
+<!-- ================= JOURNAL FEATURES ================= -->
+
+<section class="section">
+
+<div class="container">
+
+```
+<h2 class="section-title">
+    Journal Features
+</h2>
+
+<p class="section-subtitle">
+    ஆய்விதழின் சிறப்பம்சங்கள்
+</p>
+
+<div class="highlight-grid">
+
+    <div class="highlight-card">
+
+        <div class="icon icon-purple">📖</div>
+
+        <h4>Quarterly</h4>
+
+        <p>
+            காலாண்டிதழ்<br>
+            ஆண்டிற்கு நான்கு இதழ்கள்
+        </p>
+
+    </div>
+
+
+    <div class="highlight-card">
+
+        <div class="icon icon-blue">🔍</div>
+
+        <h4>Peer Reviewed</h4>
+
+        <p>
+            அறிஞர்களால் மதிப்பாய்வு செய்யப்படும்
+            ஆய்விதழ்
+        </p>
+
+    </div>
+
+
+    <div class="highlight-card">
+
+        <div class="icon icon-green">🔓</div>
+
+        <h4>Open Access</h4>
+
+        <p>
+            வெளியிடப்பட்ட ஆய்வுகளுக்கான
+            திறந்த அணுகல்
+        </p>
+
+    </div>
+
+</div>
+```
+
+</div>
+
+</section>
+
+<!-- ================= PUBLICATION DETAILS ================= -->
+
+<section class="section">
+
+<div class="container">
+
+```
+<h2 class="section-title">
+    Publication Details
+</h2>
+
+<p class="section-subtitle">
+    வெளியீட்டு விவரங்கள்
+</p>
+
+<div class="details-box">
 
     <div class="table-wrapper">
+
         <table>
 
             <tr>
@@ -451,29 +562,76 @@ footer .footer-subtitle {
             </tr>
 
         </table>
-    </div>
-</div>
 
-<div class="card">
-    <h2>Our Commitment</h2>
-
-    <div class="commitment-box">
-        <p>
-            இவ்விதழ் ஆய்வின் தரம், கல்வியியல் நேர்மை, அறிவுசார் பொறுப்பு,
-            வெளிப்படையான மதிப்பாய்வு மற்றும் ஆய்வாளர்களின் பங்களிப்பு
-            ஆகியவற்றை அடிப்படையாகக் கொண்டு செயல்படுகிறது.
-        </p>
     </div>
+
 </div>
 ```
 
 </div>
 
+</section>
+
+<!-- ================= COMMITMENT ================= -->
+
+<section class="section">
+
+<div class="container">
+
+```
+<h2 class="section-title">
+    Our Commitment
+</h2>
+
+<p class="section-subtitle">
+    எங்களின் கல்வியியல் உறுதிப்பாடு
+</p>
+
+<div class="commitment-box">
+
+    <p>
+        இவ்விதழ் ஆய்வின் தரம், கல்வியியல் நேர்மை, அறிவுசார் பொறுப்பு,
+        வெளிப்படையான மதிப்பாய்வு மற்றும் ஆய்வாளர்களின் பங்களிப்பு
+        ஆகியவற்றை அடிப்படையாகக் கொண்டு செயல்படுகிறது.
+    </p>
+
+</div>
+```
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
-    <strong>தமிழியல் பரிமாணங்கள்</strong><br>
-    <span class="footer-subtitle">Dimensions of Tamil Studies</span><br>
-    An International Peer-Reviewed Quarterly E-Journal<br>
-    © 2026 | Pollachi, Tamil Nadu, India
+
+```
+<p>
+    <strong>தமிழியல் பரிமாணங்கள்</strong>
+</p>
+
+<p>
+    Dimensions of Tamil Studies
+</p>
+
+<p>
+    Peer-Reviewed Quarterly International Journal of Tamil Studies
+</p>
+
+<p>
+    Pollachi, Tamil Nadu, India
+</p>
+
+<p>
+    📧 t.geethanjalingmc@gmail.com
+</p>
+
+<p style="margin-top:12px;">
+    © 2026 தமிழியல் பரிமாணங்கள். All Rights Reserved.
+</p>
+```
+
 </footer>
 
 </body>
