@@ -1,205 +1,286 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Submit Article | Tamil Peer-Reviewed Journal | தமிழியல் பரிமாணங்கள்</title>
-<meta name="description" content="Submit research articles to தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies), an International Peer-Reviewed Quarterly E-Journal covering Tamil language, literature, culture, history and interdisciplinary Tamil studies research.">
+<title>Submit Article | தமிழியல் பரிமாணங்கள்</title>
+
+<meta name="description" content="Submit research articles to தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies), an International Peer-Reviewed Quarterly E-Journal.">
+
 <style>
+*{box-sizing:border-box;}
 
 body{
     margin:0;
-    font-family:"Noto Sans Tamil",Arial,sans-serif;
-    background:#f7f4fb;
-    color:#333;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
 header{
-    background:linear-gradient(135deg,#5b247a,#1bcedf);
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
     color:white;
     text-align:center;
-    padding:35px 20px;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
 header h1{
-    margin:0;
+    margin:0 0 2px;
     font-size:32px;
-}
-
-header h2{
-    margin:8px 0;
-    font-size:20px;
+    font-weight:700;
 }
 
 header p{
-    margin:5px 0;
-    font-size:15px;
+    margin:3px 0;
+    font-size:16px;
+}
+
+header p:last-child{
+    color:#e0e7ff;
+    font-weight:600;
 }
 
 nav{
-    background:#3f1763;
-    text-align:center;
-    padding:12px 10px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:8px 10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
 nav a{
-    color:white;
+    color:#312e81;
     text-decoration:none;
-    margin:5px 8px;
+    padding:7px 12px;
+    border-radius:20px;
     font-size:14px;
-    display:inline-block;
+    font-weight:600;
 }
 
 nav a:hover{
-    text-decoration:underline;
+    background:#312e81;
+    color:white;
 }
 
 .container{
-    max-width:900px;
-    margin:35px auto;
-    padding:0 20px;
+    width:92%;
+    max-width:950px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-.card{
+.content-box{
     background:white;
-    padding:30px;
+    padding:22px;
+    margin-bottom:12px;
     border-radius:14px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.08);
-    margin-bottom:25px;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
+    border-top:4px solid #312e81;
 }
 
-h2{
-    color:#5b247a;
+.content-box h2{
+    color:#312e81;
+    margin:0 0 10px;
+    font-size:22px;
 }
 
-h3{
-    color:#3f1763;
-    margin-top:25px;
+.content-box h3{
+    color:#4c1d95;
+    margin:8px 0 14px;
 }
 
 .info{
-    background:#f1eafa;
-    border-left:5px solid #5b247a;
-    padding:15px;
-    border-radius:8px;
-    margin-bottom:25px;
+    background:#f0eafa;
+    border-left:5px solid #312e81;
+    padding:15px 18px;
+    border-radius:9px;
+    margin-bottom:20px;
 }
 
 label{
     display:block;
-    font-weight:bold;
-    margin-top:18px;
-    margin-bottom:7px;
-    color:#3f1763;
+    font-weight:700;
+    margin:15px 0 6px;
+    color:#312e81;
 }
 
 input,
 select,
 textarea{
     width:100%;
-    box-sizing:border-box;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:7px;
+    padding:11px 12px;
+    border:1px solid #ccd1d9;
+    border-radius:8px;
     font-size:15px;
     font-family:inherit;
+    background:#fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#312e81;
+    box-shadow:0 0 0 2px rgba(49,46,129,.10);
 }
 
 textarea{
-    min-height:130px;
+    min-height:120px;
     resize:vertical;
 }
 
 input[type="file"]{
     background:#fafafa;
+    padding:10px;
+}
+
+.note{
+    font-size:13px;
+    color:#667085;
+    margin:5px 0 0;
 }
 
 .checkbox{
     display:flex;
     align-items:flex-start;
-    gap:10px;
-    margin-top:22px;
-    font-weight:normal;
+    gap:9px;
+    margin-top:20px;
+    font-weight:400;
+    color:#263238;
 }
 
 .checkbox input{
     width:auto;
-    margin-top:5px;
+    margin-top:6px;
 }
 
 button{
-    margin-top:25px;
-    background:#5b247a;
+    margin-top:20px;
+    background:#312e81;
     color:white;
     border:none;
-    padding:13px 25px;
-    border-radius:7px;
-    font-size:16px;
+    padding:11px 22px;
+    border-radius:20px;
+    font-size:15px;
+    font-weight:600;
     cursor:pointer;
 }
 
 button:hover{
-    background:#3f1763;
+    background:#172554;
 }
 
-.note{
-    font-size:14px;
-    color:#666;
-    margin-top:7px;
+button:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+}
+
+#form-status{
+    margin-top:12px;
+    font-weight:600;
 }
 
 .back{
     display:inline-block;
-    margin-top:15px;
-    color:#5b247a;
+    margin-top:12px;
+    color:#312e81;
     text-decoration:none;
-    font-weight:bold;
+    font-weight:600;
 }
 
 footer{
-    background:#3f1763;
+    background:#172554;
     color:white;
     text-align:center;
-    padding:25px 15px;
-    margin-top:40px;
-    font-size:14px;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
 }
 
+footer strong{
+    font-size:17px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    header p{
+        font-size:14px;
+    }
+
+    nav{
+        padding:7px 6px;
+        gap:3px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 10px;
+    }
+
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .content-box{
+        padding:17px;
+    }
+
+    .content-box h2{
+        font-size:20px;
+    }
+
+    footer{
+        padding:20px 12px;
+        font-size:14px;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-
-<h1>தமிழியல் பரிமாணங்கள்</h1>
-
-<h2>Dimensions of Tamil Studies</h2>
-
-<p>An International Peer-Reviewed Quarterly E-Journal</p>
-
+    <h1>தமிழியல் பரிமாணங்கள்</h1>
+    <p>Dimensions of Tamil Studies</p>
+    <p>An International Peer-Reviewed Quarterly E-Journal</p>
+    <p>Pollachi, Tamil Nadu, India</p>
 </header>
 
-
 <nav>
-
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="aims-scope.html">Aims &amp; Scope</a>
-<a href="editorial-board.html">Editorial Board</a>
-<a href="author-guidelines.html">Author Guidelines</a>
-<a href="peer-review.html">Peer Review</a>
-<a href="ethics.html">Publication Ethics</a>
-<a href="archives.html">Archives</a>
-<a href="contact.html">Contact</a>
-
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="aims-scope.html">Aims &amp; Scope</a>
+    <a href="editorial-board.html">Editorial Board</a>
+    <a href="author-guidelines.html">Author Guidelines</a>
+    <a href="peer-review.html">Peer Review</a>
+    <a href="ethics.html">Publication Ethics</a>
+    <a href="archives.html">Archives</a>
+    <a href="call-for-papers.html">Call for Papers</a>
+    <a href="submit-article.html">Submit Article</a>
+    <a href="submission-process.html">Submission Process</a>
+    <a href="contact.html">Contact</a>
 </nav>
-
 
 <div class="container">
 
-<div class="card">
+<div class="content-box">
 
 <h2>ஆய்வுக் கட்டுரை சமர்ப்பிப்பு</h2>
 
@@ -209,15 +290,16 @@ footer{
 
 <strong>ஆய்வாளர்களுக்கான அறிவிப்பு:</strong><br><br>
 
-உங்கள் ஆய்வுக் கட்டுரையை கீழே உள்ள ஆன்லைன் சமர்ப்பிப்பு படிவத்தின் மூலம் சமர்ப்பிக்கலாம்.
+உங்கள் ஆய்வுக் கட்டுரையை கீழே உள்ள ஆன்லைன் சமர்ப்பிப்பு
+படிவத்தின் மூலம் சமர்ப்பிக்கலாம்.
 
 கட்டுரை <strong>Word (.doc / .docx)</strong> அல்லது
 <strong>PDF (.pdf)</strong> வடிவில் இருக்க வேண்டும்.
 
-கட்டுரையை சமர்ப்பித்த பிறகு, அது முதற்கட்ட ஆசிரியர் பரிசீலனை மற்றும் தேவையான நிலையில் சக மதிப்பாய்வுக்கு அனுப்பப்படும்.
+கட்டுரை சமர்ப்பிக்கப்பட்ட பிறகு, அது முதற்கட்ட ஆசிரியர்
+பரிசீலனை மற்றும் தேவையான நிலையில் சக மதிப்பாய்வுக்கு அனுப்பப்படும்.
 
 </div>
-
 
 <form id="article-form">
 
@@ -233,7 +315,6 @@ placeholder="Enter Author Name"
 required
 >
 
-
 <label for="affiliation">
 நிறுவன இணைப்பு / Affiliation *
 </label>
@@ -245,7 +326,6 @@ name="fi-text-affiliation"
 placeholder="College / University / Institution"
 required
 >
-
 
 <label for="email">
 மின்னஞ்சல் / Email *
@@ -259,7 +339,6 @@ placeholder="Enter Email Address"
 required
 >
 
-
 <label for="mobile">
 அலைபேசி எண் / Mobile Number
 </label>
@@ -270,7 +349,6 @@ id="mobile"
 name="fi-text-mobile"
 placeholder="Enter Mobile Number"
 >
-
 
 <label for="title">
 ஆய்வுக் கட்டுரைத் தலைப்பு / Article Title *
@@ -283,7 +361,6 @@ name="fi-text-articleTitle"
 placeholder="Enter Article Title"
 required
 >
-
 
 <label for="language">
 கட்டுரையின் மொழி / Article Language *
@@ -301,7 +378,6 @@ required
 
 </select>
 
-
 <label for="abstract">
 சுருக்கம் / Abstract *
 </label>
@@ -312,7 +388,6 @@ name="fi-text-abstract"
 placeholder="Enter your article abstract"
 required
 ></textarea>
-
 
 <label for="keywords">
 முக்கியச் சொற்கள் / Keywords *
@@ -325,7 +400,6 @@ name="fi-text-keywords"
 placeholder="Example: Tamil Literature, Sangam Literature, Feminism"
 required
 >
-
 
 <label for="manuscript">
 ஆய்வுக் கட்டுரை / Manuscript File *
@@ -340,9 +414,9 @@ required
 >
 
 <p class="note">
-Accepted formats: Word (.doc, .docx) and PDF (.pdf). Maximum total file size: 25 MB.
+Accepted formats: Word (.doc, .docx) and PDF (.pdf).
+Maximum total file size: 25 MB.
 </p>
-
 
 <label class="checkbox">
 
@@ -355,12 +429,12 @@ required
 >
 
 <span>
-இந்த ஆய்வுக் கட்டுரை எனது/எங்களது சொந்த ஆய்வு என்பதை உறுதிப்படுத்துகிறேன்.
-இக்கட்டுரை வேறு எந்த இதழிலும் ஒரே நேரத்தில் பரிசீலனையில் இல்லை என்பதையும் உறுதிப்படுத்துகிறேன்.
+இந்த ஆய்வுக் கட்டுரை எனது/எங்களது சொந்த ஆய்வு என்பதை
+உறுதிப்படுத்துகிறேன். இக்கட்டுரை வேறு எந்த இதழிலும்
+ஒரே நேரத்தில் பரிசீலனையில் இல்லை என்பதையும் உறுதிப்படுத்துகிறேன்.
 </span>
 
 </label>
-
 
 <button type="submit" id="submitButton">
 Submit Manuscript
@@ -370,7 +444,6 @@ Submit Manuscript
 
 </form>
 
-
 <a class="back" href="index.html">
 ← Back to Home
 </a>
@@ -378,7 +451,6 @@ Submit Manuscript
 </div>
 
 </div>
-
 
 <footer>
 
@@ -392,7 +464,6 @@ Submit Manuscript
 
 </footer>
 
-
 <script src="https://forminit.com/sdk/v1/forminit.js"></script>
 
 <script>
@@ -402,33 +473,26 @@ const forminit = new Forminit();
 const FORM_ID = "f2zwe52b75w";
 
 const form = document.getElementById("article-form");
-
 const status = document.getElementById("form-status");
-
 const button = document.getElementById("submitButton");
-
 
 form.addEventListener("submit", async function(event){
 
     event.preventDefault();
 
     status.textContent = "Uploading manuscript... Please wait.";
-    status.style.color = "#5b247a";
+    status.style.color = "#312e81";
 
     button.disabled = true;
     button.textContent = "Submitting...";
 
-
     const formData = new FormData(form);
-
 
     const { data, redirectUrl, error } =
         await forminit.submit(FORM_ID, formData);
 
-
     button.disabled = false;
     button.textContent = "Submit Manuscript";
-
 
     if(error){
 
@@ -440,26 +504,20 @@ form.addEventListener("submit", async function(event){
         return;
     }
 
-
     status.textContent =
         "Your manuscript has been submitted successfully.";
 
     status.style.color = "green";
 
-
     form.reset();
 
-
     if(redirectUrl){
-
         window.location.href = redirectUrl;
-
     }
 
 });
 
 </script>
-
 
 </body>
 </html>
