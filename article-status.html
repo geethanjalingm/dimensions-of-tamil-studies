@@ -1,4 +1,3 @@
-﻿```html
 <!DOCTYPE html>
 <html lang="ta">
 <head>
@@ -6,140 +5,224 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Article Status | தமிழியல் பரிமாணங்கள்</title>
+
 <meta name="description" content="தமிழியல் பரிமாணங்கள் இதழில் சமர்ப்பிக்கப்பட்ட ஆய்வுக் கட்டுரையின் Article ID மூலம் அதன் தற்போதைய சமர்ப்பிப்பு மற்றும் மதிப்பாய்வு நிலையை அறியும் வசதி.">
+
 <style>
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f5f3fa;
-    color: #333;
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-header {
-    background: linear-gradient(135deg, #5b2c83, #008c95);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 30px;
+header h1{
+    margin:0 0 2px;
+    font-size:32px;
+    font-weight:700;
 }
 
-header p {
-    margin: 8px 0 0;
-    font-size: 16px;
+header p{
+    margin:3px 0;
+    font-size:16px;
 }
 
-nav {
-    background: #321653;
-    text-align: center;
-    padding: 12px;
+header p:nth-of-type(2){
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 15px;
+nav{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:8px 10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a{
+    color:#312e81;
+    text-decoration:none;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
 
-.container {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 0 20px;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.container{
+    width:92%;
+    max-width:850px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-h2 {
-    color: #5b2c83;
-    margin-top: 0;
+.card{
+    background:white;
+    padding:24px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
+    border-top:4px solid #312e81;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 8px;
+.card h2{
+    color:#312e81;
+    margin:0 0 10px;
+    font-size:22px;
 }
 
-input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 13px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    font-size: 16px;
-    margin-bottom: 15px;
+.card > p{
+    margin:0 0 18px;
 }
 
-button {
-    background: #5b2c83;
-    color: white;
-    border: none;
-    padding: 13px 22px;
-    border-radius: 7px;
-    font-size: 16px;
-    cursor: pointer;
+label{
+    display:block;
+    font-weight:700;
+    color:#312e81;
+    margin-bottom:6px;
 }
 
-button:hover {
-    background: #432064;
+input{
+    width:100%;
+    padding:11px 13px;
+    border:1px solid #cbd5e1;
+    border-radius:7px;
+    font-size:16px;
+    margin-bottom:12px;
+    outline:none;
 }
 
-.result {
-    margin-top: 25px;
-    padding: 20px;
-    border-radius: 8px;
-    display: none;
+input:focus{
+    border-color:#312e81;
+    box-shadow:0 0 0 2px #e0e7ff;
 }
 
-.success {
-    background: #eef9f3;
-    border-left: 5px solid #198754;
+button{
+    background:#312e81;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:7px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
 }
 
-.error {
-    background: #fff0f0;
-    border-left: 5px solid #dc3545;
+button:hover{
+    background:#4c1d95;
 }
 
-.status {
-    font-size: 22px;
-    font-weight: bold;
-    color: #5b2c83;
-    margin-top: 8px;
+.result{
+    margin-top:18px;
+    padding:16px;
+    border-radius:9px;
+    display:none;
 }
 
-.info {
-    margin: 8px 0;
+.success{
+    background:#eef9f3;
+    border-left:5px solid #198754;
 }
 
-.note {
-    margin-top: 25px;
-    padding: 15px;
-    background: #f4f0fa;
-    border-radius: 8px;
-    font-size: 14px;
+.error{
+    background:#fff1f2;
+    border-left:5px solid #dc3545;
 }
 
-footer {
-    margin-top: 50px;
-    background: #321653;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    font-size: 14px;
+.status{
+    font-size:20px;
+    font-weight:700;
+    color:#312e81;
+    margin-top:5px;
+}
+
+.info{
+    margin:5px 0;
+}
+
+.note{
+    margin-top:18px;
+    padding:15px 17px;
+    background:#fffaf0;
+    border-left:5px solid #d97706;
+    border-radius:8px;
+    font-size:14px;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
+}
+
+footer div{
+    margin:3px 0;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    header p{
+        font-size:14px;
+    }
+
+    nav{
+        padding:7px 6px;
+        gap:3px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 10px;
+    }
+
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:20px;
+    }
+
+    footer{
+        padding:20px 12px;
+        font-size:14px;
+    }
 }
 </style>
 </head>
@@ -147,17 +230,23 @@ footer {
 <body>
 
 <header>
+
     <h1>தமிழியல் பரிமாணங்கள்</h1>
+
     <p>Dimensions of Tamil Studies</p>
+
     <p>An International Peer-Reviewed Quarterly E-Journal</p>
+
 </header>
 
 <nav>
+
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="submission-process.html">Submission Process</a>
     <a href="author-guidelines.html">Author Guidelines</a>
     <a href="contact.html">Contact</a>
+
 </nav>
 
 <div class="container">
@@ -186,10 +275,13 @@ footer {
         <div id="result" class="result"></div>
 
         <div class="note">
+
             <strong>குறிப்பு:</strong><br>
+
             காட்டப்படும் நிலை ஆசிரியர் பரிசீலனை,
             சக மதிப்பாய்வு மற்றும் இறுதி ஆசிரியர் முடிவு
             போன்ற நடைமுறைகளின் அடிப்படையில் மாறலாம்.
+
         </div>
 
     </div>
@@ -197,20 +289,23 @@ footer {
 </div>
 
 <footer>
-    <div>தமிழியல் பரிமாணங்கள்</div>
-    <div>Dimensions of Tamil Studies</div>
-    <div>An International Peer-Reviewed Quarterly E-Journal</div>
-    <div>© 2026 | Pollachi, Tamil Nadu, India</div>
-</footer>
 
+    <div><strong>தமிழியல் பரிமாணங்கள்</strong></div>
+
+    <div>Dimensions of Tamil Studies</div>
+
+    <div>An International Peer-Reviewed Quarterly E-Journal</div>
+
+    <div>© 2026 | Pollachi, Tamil Nadu, India</div>
+
+</footer>
 
 <script>
 
 const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbwGxRuoZvGndujcsk3ujiV0ky041R9aEnbvhJybECA1UPlo_m74YWbQPscAskQq3xIX8A/exec";
 
-
-async function checkStatus() {
+async function checkStatus(){
 
     const articleId =
         document.getElementById("articleId").value.trim();
@@ -218,10 +313,10 @@ async function checkStatus() {
     const result =
         document.getElementById("result");
 
-    if (!articleId) {
+    if(!articleId){
 
-        result.style.display = "block";
-        result.className = "result error";
+        result.style.display="block";
+        result.className="result error";
 
         result.innerHTML =
             "<strong>Article ID உள்ளிடவும்.</strong>";
@@ -229,39 +324,35 @@ async function checkStatus() {
         return;
     }
 
-
-    result.style.display = "block";
-    result.className = "result";
+    result.style.display="block";
+    result.className="result";
 
     result.innerHTML =
         "தயவுசெய்து காத்திருக்கவும்...";
 
-
-    try {
+    try{
 
         const response =
             await fetch(WEB_APP_URL);
 
-        if (!response.ok) {
+        if(!response.ok){
             throw new Error("Network response was not OK");
         }
 
         const data =
             await response.json();
 
-
         const article =
-            data.find(function(item) {
+            data.find(function(item){
 
                 return String(item.articleId).trim().toUpperCase()
                     === articleId.toUpperCase();
 
             });
 
+        if(!article){
 
-        if (!article) {
-
-            result.className = "result error";
+            result.className="result error";
 
             result.innerHTML =
                 "<strong>Article ID கிடைக்கவில்லை.</strong><br><br>" +
@@ -270,8 +361,7 @@ async function checkStatus() {
             return;
         }
 
-
-        result.className = "result success";
+        result.className="result success";
 
         result.innerHTML =
             "<div class='info'><strong>Article ID:</strong> "
@@ -288,10 +378,9 @@ async function checkStatus() {
             + article.status
             + "</div>";
 
+    }catch(error){
 
-    } catch (error) {
-
-        result.className = "result error";
+        result.className="result error";
 
         result.innerHTML =
             "<strong>தகவலைப் பெற முடியவில்லை.</strong><br><br>" +
@@ -305,4 +394,3 @@ async function checkStatus() {
 
 </body>
 </html>
-```
