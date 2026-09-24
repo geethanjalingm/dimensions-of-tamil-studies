@@ -1,90 +1,82 @@
 <!DOCTYPE html>
-
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>About | தமிழியல் பரிமாணங்கள் | Dimensions of Tamil Studies</title>
+<title>About – தமிழியல் பரிமாணங்கள்</title>
 
-<meta name="description" content="தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies) பற்றிய தகவல்கள், வெளியீட்டு விவரங்கள் மற்றும் சர்வதேச சக மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழின் நோக்கங்கள்.">
+<meta name="description" content="தமிழியல் பரிமாணங்கள் – Dimensions of Tamil Studies is an International Peer-Reviewed Quarterly E-Journal dedicated to Tamil language, literature, culture, history and interdisciplinary Tamil studies.">
 
 <style>
-
 *{
     box-sizing:border-box;
-    margin:0;
-    padding:0;
 }
 
 body{
-    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    margin:0;
     background:#f5f7fb;
     color:#263238;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
     line-height:1.7;
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header{
     background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
     color:white;
     text-align:center;
-    padding:28px 20px 22px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    padding:24px 15px 20px;
+    box-shadow:0 3px 12px rgba(0,0,0,0.15);
 }
 
 .logo{
     width:85px;
     height:85px;
-    object-fit:contain;
+    object-fit:cover;
     border-radius:50%;
     background:white;
-    padding:5px;
-    margin-bottom:10px;
+    padding:4px;
+    margin-bottom:8px;
 }
 
 header h1{
+    margin:2px 0;
     font-size:32px;
-    margin-bottom:2px;
-    font-weight:700;
 }
 
 header h2{
+    margin:2px 0 5px;
     font-size:21px;
-    font-weight:500;
-    margin-bottom:7px;
-}
-
-.header-tagline{
-    font-size:16px;
-    color:#e0e7ff;
     font-weight:600;
 }
 
-/* ================= NAVIGATION ================= */
+.tagline{
+    color:#e0e7ff;
+    font-size:15px;
+}
 
+/* NAVIGATION */
 nav{
-    background:#ffffff;
+    background:white;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:5px;
-    padding:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    padding:8px 10px;
     position:sticky;
     top:0;
     z-index:100;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 nav a{
     text-decoration:none;
     color:#312e81;
-    padding:8px 13px;
-    border-radius:20px;
-    font-size:14px;
     font-weight:600;
-    transition:0.3s;
+    padding:7px 11px;
+    border-radius:7px;
+    font-size:14px;
 }
 
 nav a:hover{
@@ -92,127 +84,94 @@ nav a:hover{
     color:white;
 }
 
-/* ================= PAGE HERO ================= */
-
-.page-hero{
+/* PAGE HERO */
+.hero{
     background:linear-gradient(135deg,#eef2ff,#faf5ff);
-    padding:45px 20px;
     text-align:center;
+    padding:25px 15px;
+    border-bottom:1px solid #e5e7eb;
 }
 
-.page-hero h3{
+.hero h2{
     color:#312e81;
-    font-size:30px;
-    margin-bottom:7px;
+    font-size:27px;
+    margin:0 0 3px;
 }
 
-.page-hero p{
+.hero p{
+    margin:0;
     color:#555;
-    font-size:17px;
+    font-size:15px;
 }
 
-/* ================= CONTAINER ================= */
-
+/* MAIN */
 .container{
-    width:92%;
-    max-width:1150px;
-    margin:auto;
+    max-width:1050px;
+    margin:0 auto;
+    padding:20px 15px;
 }
-
-/* ================= SECTIONS ================= */
 
 .section{
-    padding:42px 0;
+    margin-bottom:18px;
 }
 
 .section-title{
-    text-align:center;
     color:#312e81;
-    font-size:27px;
-    margin-bottom:8px;
-}
-
-.section-subtitle{
     text-align:center;
-    color:#666;
-    margin-bottom:28px;
+    font-size:22px;
+    margin:0 0 10px;
 }
 
-/* ================= ABOUT CARD ================= */
-
-.about-card{
+/* CARDS */
+.card{
     background:white;
-    padding:32px;
-    border-radius:16px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
+    padding:18px 20px;
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.07);
     border-top:4px solid #4f46e5;
 }
 
-.about-card p{
-    margin-bottom:16px;
-    text-align:justify;
+.card p{
+    margin:6px 0;
 }
 
-.about-card p:last-child{
-    margin-bottom:0;
-}
-
-.about-card strong{
-    color:#312e81;
-}
-
-/* ================= HIGHLIGHTS ================= */
-
-.highlight-grid{
+/* FEATURE BOXES */
+.features{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
 }
 
-.highlight-card{
+.feature{
     background:white;
-    padding:22px;
-    border-radius:15px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
-    border-top:4px solid #4f46e5;
+    padding:14px;
+    border-radius:12px;
     text-align:center;
+    box-shadow:0 3px 12px rgba(0,0,0,0.07);
+    border-top:4px solid #4f46e5;
 }
 
-.highlight-card .icon{
-    width:55px;
-    height:55px;
-    margin:0 auto 12px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.feature h3{
+    color:#312e81;
+    margin:4px 0;
+    font-size:17px;
+}
+
+.feature p{
+    margin:3px 0;
+    font-size:14px;
+}
+
+.icon{
     font-size:27px;
 }
 
-.icon-purple{background:#ede9fe;}
-.icon-blue{background:#dbeafe;}
-.icon-green{background:#dcfce7;}
-
-.highlight-card h4{
-    color:#312e81;
-    margin-bottom:5px;
-}
-
-.highlight-card p{
-    font-size:14px;
-    color:#555;
-}
-
-/* ================= PUBLICATION DETAILS ================= */
-
-.details-box{
+/* TABLE */
+.table-box{
     background:white;
-    padding:30px;
-    border-radius:16px;
-    box-shadow:0 4px 14px rgba(0,0,0,0.08);
-}
-
-.table-wrapper{
+    padding:14px;
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.07);
     overflow-x:auto;
 }
 
@@ -221,416 +180,281 @@ table{
     border-collapse:collapse;
 }
 
-th,
-td{
-    padding:14px 15px;
-    border-bottom:1px solid #e5e7eb;
+th,td{
+    border:1px solid #e5e7eb;
+    padding:9px 11px;
     text-align:left;
 }
 
 th{
-    width:34%;
-    background:#eef2ff;
+    width:32%;
+    background:#f5f3ff;
     color:#312e81;
 }
 
-td{
-    background:#ffffff;
+tr:nth-child(even) td{
+    background:#fafafa;
 }
 
-tr:last-child th,
-tr:last-child td{
-    border-bottom:none;
+/* COMMITMENT */
+.commitment{
+    background:linear-gradient(135deg,#312e81,#4f46e5);
+    color:white;
+    padding:20px;
+    border-radius:14px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.12);
 }
 
-/* ================= COMMITMENT ================= */
-
-.commitment-box{
-    background:linear-gradient(135deg,#eef2ff,#f5f3ff);
-    padding:30px;
-    border-radius:16px;
-    border:1px solid #ddd6fe;
-    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+.commitment h2{
+    margin:0 0 8px;
     text-align:center;
+    font-size:22px;
 }
 
-.commitment-box p{
-    max-width:900px;
-    margin:auto;
+.commitment p{
+    margin:5px 0;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer{
     background:#111827;
     color:#d1d5db;
     text-align:center;
-    padding:28px 15px;
-    margin-top:20px;
-}
-
-footer strong{
-    color:white;
-}
-
-footer p{
-    margin:4px 0;
+    padding:18px 12px;
+    margin-top:10px;
     font-size:14px;
 }
 
-/* ================= MOBILE ================= */
+footer p{
+    margin:3px 0;
+}
 
-@media(max-width:600px){
+/* MOBILE */
+@media(max-width:700px){
 
     header h1{
-        font-size:26px;
+        font-size:25px;
     }
 
     header h2{
         font-size:18px;
     }
 
-    .header-tagline{
-        font-size:13px;
+    .features{
+        grid-template-columns:1fr;
     }
 
-    nav{
-        position:static;
+    .container{
+        padding:15px 10px;
     }
 
-    nav a{
-        font-size:13px;
-        padding:6px 9px;
+    .card,
+    .commitment{
+        padding:15px;
     }
 
-    .page-hero h3{
-        font-size:24px;
+    .hero{
+        padding:20px 10px;
     }
 
-    .section{
-        padding:32px 0;
+    .hero h2{
+        font-size:23px;
     }
 
-    .about-card,
-    .details-box{
-        padding:22px 18px;
-    }
-
-    th,
-    td{
-        padding:11px;
+    th,td{
+        padding:8px;
         font-size:14px;
     }
-
-    th{
-        width:38%;
-    }
-
 }
-
 </style>
-
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header>
 
-```
-<img src="logo.png.png"
-     alt="தமிழியல் பரிமாணங்கள் Logo"
-     class="logo">
+    <img src="logo.png.png" alt="தமிழியல் பரிமாணங்கள் Logo" class="logo">
 
-<h1>தமிழியல் பரிமாணங்கள்</h1>
+    <h1>தமிழியல் பரிமாணங்கள்</h1>
 
-<h2>Dimensions of Tamil Studies</h2>
+    <h2>Dimensions of Tamil Studies</h2>
 
-<div class="header-tagline">
-    அறிஞர்களால் மதிப்பீடு செய்யப்படும் காலாண்டு சர்வதேசத் தமிழ் ஆய்விதழ்
-    <br>
-    Peer-Reviewed Quarterly International Journal of Tamil Studies
-</div>
-```
+    <div class="tagline">
+        International Peer-Reviewed Quarterly E-Journal
+    </div>
 
 </header>
 
-<!-- ================= NAVIGATION ================= -->
-
 <nav>
-
-```
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="aims.html">Aims &amp; Scope</a>
-<a href="editorial.html">Editorial Board</a>
-<a href="guidelines.html">Author Guidelines</a>
-<a href="peer-review.html">Peer Review</a>
-<a href="ethics.html">Publication Ethics</a>
-<a href="archives.html">Archives</a>
-<a href="contact.html">Contact</a>
-```
-
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="aims.html">Aims & Scope</a>
+    <a href="editorial.html">Editorial Board</a>
+    <a href="guidelines.html">Author Guidelines</a>
+    <a href="peer-review.html">Peer Review</a>
+    <a href="ethics.html">Publication Ethics</a>
+    <a href="archives.html">Archives</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
-<!-- ================= PAGE HERO ================= -->
+<section class="hero">
 
-<section class="page-hero">
+    <h2>About the Journal</h2>
 
-```
-<div class="container">
-
-    <h3>About the Journal</h3>
-
-    <p>இதழைப் பற்றி | தமிழியல் பரிமாணங்கள்</p>
-
-</div>
-```
+    <p>இதழைப் பற்றி</p>
 
 </section>
 
-<!-- ================= ABOUT ================= -->
+<main class="container">
 
-<section class="section">
+    <section class="section">
 
-<div class="container">
+        <div class="card">
 
-```
-<div class="about-card">
+            <p>
+                <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
+                என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும்
+                பன்முகத் தமிழியல் ஆய்வுகளை மையமாகக் கொண்ட
+                <strong>International Peer-Reviewed Quarterly E-Journal</strong> ஆகும்.
+            </p>
 
-    <h2 class="section-title">
-        இதழைப் பற்றி
-    </h2>
+            <p>
+                இவ்விதழ் புதிய ஆய்வுச் சிந்தனைகள், அறிவியல் சார்ந்த ஆய்வுகள்
+                மற்றும் தரமான கல்விசார் பங்களிப்புகளை ஊக்குவிப்பதை நோக்கமாகக்
+                கொண்டுள்ளது.
+            </p>
 
-    <p>
-        <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
-        என்பது தமிழ் மொழி, இலக்கியம், பண்பாடு, வரலாறு மற்றும் தமிழியல்
-        சார்ந்த பல்வேறு ஆய்வுத்துறைகளை உள்ளடக்கிய சர்வதேச சக மதிப்பாய்வு
-        செய்யப்பட்ட காலாண்டு மின்னிதழாகும்.
-    </p>
+            <p>
+                தமிழியல் ஆய்வுகளை உலகளாவிய கல்வியியல் சூழலுடன் இணைத்து,
+                ஆய்வாளர்கள் மற்றும் கல்வியாளர்களிடையே அறிவியல் பரிமாற்றத்தை
+                மேம்படுத்துவதே இதழின் முக்கிய நோக்கமாகும்.
+            </p>
 
-    <p>
-        தமிழியல் சார்ந்த புதிய ஆய்வுச் சிந்தனைகளையும் அறிவியல் நோக்கிலான
-        ஆய்வுகளையும் ஊக்குவிப்பதும், ஆய்வாளர்கள் மற்றும் கல்வியாளர்களிடையே
-        அறிவியல் சார்ந்த கருத்துப் பரிமாற்றத்தை மேம்படுத்துவதும் இவ்விதழின்
-        முக்கிய நோக்கங்களாகும்.
-    </p>
+        </div>
 
-    <p>
-        தமிழ் ஆய்வுகளை உலகளாவிய கல்வியியல் சூழலுடன் இணைத்து,
-        தரமான ஆய்வுக் கட்டுரைகளை வெளியிடுவதற்கான கல்வியியல் தளமாக
-        இம்மின்னிதழ் செயல்படுகிறது.
-    </p>
+    </section>
 
-</div>
-```
+    <section class="section">
 
-</div>
+        <h2 class="section-title">Journal Features</h2>
 
-</section>
+        <div class="features">
 
-<!-- ================= JOURNAL FEATURES ================= -->
+            <div class="feature">
+                <div class="icon">📅</div>
+                <h3>Quarterly</h3>
+                <p>ஆண்டிற்கு நான்கு முறை</p>
+                <p>March • June • September • December</p>
+            </div>
 
-<section class="section">
+            <div class="feature">
+                <div class="icon">🔎</div>
+                <h3>Peer Reviewed</h3>
+                <p>ஆய்வுக் கட்டுரைகள் தகுந்த மதிப்பாய்விற்கு உட்படுத்தப்படும்.</p>
+            </div>
 
-<div class="container">
+            <div class="feature">
+                <div class="icon">🌐</div>
+                <h3>Open Access</h3>
+                <p>திறந்த அணுகல் கல்வியியல் மின்னிதழ்</p>
+            </div>
 
-```
-<h2 class="section-title">
-    Journal Features
-</h2>
+        </div>
 
-<p class="section-subtitle">
-    ஆய்விதழின் சிறப்பம்சங்கள்
-</p>
+    </section>
 
-<div class="highlight-grid">
+    <section class="section">
 
-    <div class="highlight-card">
+        <h2 class="section-title">Publication Details</h2>
 
-        <div class="icon icon-purple">📖</div>
+        <div class="table-box">
 
-        <h4>Quarterly</h4>
+            <table>
 
-        <p>
-            காலாண்டிதழ்<br>
-            ஆண்டிற்கு நான்கு இதழ்கள்
-        </p>
+                <tr>
+                    <th>Journal Name</th>
+                    <td>தமிழியல் பரிமாணங்கள்</td>
+                </tr>
 
-    </div>
+                <tr>
+                    <th>English Title</th>
+                    <td>Dimensions of Tamil Studies</td>
+                </tr>
 
+                <tr>
+                    <th>Publication Frequency</th>
+                    <td>Quarterly – ஆண்டிற்கு நான்கு முறை</td>
+                </tr>
 
-    <div class="highlight-card">
+                <tr>
+                    <th>Format</th>
+                    <td>Online E-Journal</td>
+                </tr>
 
-        <div class="icon icon-blue">🔍</div>
+                <tr>
+                    <th>Language</th>
+                    <td>Tamil and English</td>
+                </tr>
 
-        <h4>Peer Reviewed</h4>
+                <tr>
+                    <th>ISSN</th>
+                    <td>Not Assigned</td>
+                </tr>
 
-        <p>
-            அறிஞர்களால் மதிப்பாய்வு செய்யப்படும்
-            ஆய்விதழ்
-        </p>
+                <tr>
+                    <th>Publisher</th>
+                    <td>Dr. T. Geethanjali</td>
+                </tr>
 
-    </div>
+                <tr>
+                    <th>Editor-in-Chief</th>
+                    <td>Dr. T. Geethanjali, M.A., M.Phil., Ph.D., NET</td>
+                </tr>
 
+                <tr>
+                    <th>Place</th>
+                    <td>Pollachi, Tamil Nadu, India</td>
+                </tr>
 
-    <div class="highlight-card">
+            </table>
 
-        <div class="icon icon-green">🔓</div>
+        </div>
 
-        <h4>Open Access</h4>
+    </section>
 
-        <p>
-            வெளியிடப்பட்ட ஆய்வுகளுக்கான
-            திறந்த அணுகல்
-        </p>
+    <section class="section">
 
-    </div>
+        <div class="commitment">
 
-</div>
-```
+            <h2>Our Commitment</h2>
 
-</div>
+            <p>
+                தமிழியல் பரிமாணங்கள் இதழ் ஆய்வுத் தரம், கல்வியியல் நேர்மை,
+                அறிவுசார் பொறுப்பு மற்றும் வெளிப்படையான மதிப்பாய்வு
+                நடைமுறைகளை உறுதிப்படுத்துகிறது.
+            </p>
 
-</section>
+            <p>
+                தமிழ் ஆய்வுத் துறையில் புதிய சிந்தனைகள் மற்றும் தரமான
+                ஆய்வுப் பங்களிப்புகளுக்கு உரிய கல்வியியல் தளத்தை
+                உருவாக்குவதே எங்களின் உறுதிப்பாடாகும்.
+            </p>
 
-<!-- ================= PUBLICATION DETAILS ================= -->
+        </div>
 
-<section class="section">
+    </section>
 
-<div class="container">
-
-```
-<h2 class="section-title">
-    Publication Details
-</h2>
-
-<p class="section-subtitle">
-    வெளியீட்டு விவரங்கள்
-</p>
-
-<div class="details-box">
-
-    <div class="table-wrapper">
-
-        <table>
-
-            <tr>
-                <th>Journal Name</th>
-                <td>தமிழியல் பரிமாணங்கள்</td>
-            </tr>
-
-            <tr>
-                <th>English Title</th>
-                <td>Dimensions of Tamil Studies</td>
-            </tr>
-
-            <tr>
-                <th>Publication Frequency</th>
-                <td>Quarterly – ஆண்டிற்கு நான்கு முறை</td>
-            </tr>
-
-            <tr>
-                <th>Format</th>
-                <td>Online E-Journal</td>
-            </tr>
-
-            <tr>
-                <th>Language</th>
-                <td>Tamil and English</td>
-            </tr>
-
-            <tr>
-                <th>ISSN</th>
-                <td>To be Assigned</td>
-            </tr>
-
-            <tr>
-                <th>Publisher</th>
-                <td>Dr. T. Geethanjali</td>
-            </tr>
-
-            <tr>
-                <th>Editor-in-Chief</th>
-                <td>Dr. T. Geethanjali, M.A., M.Phil., Ph.D., NET</td>
-            </tr>
-
-            <tr>
-                <th>Place</th>
-                <td>Pollachi, Tamil Nadu, India</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-</div>
-```
-
-</div>
-
-</section>
-
-<!-- ================= COMMITMENT ================= -->
-
-<section class="section">
-
-<div class="container">
-
-```
-<h2 class="section-title">
-    Our Commitment
-</h2>
-
-<p class="section-subtitle">
-    எங்களின் கல்வியியல் உறுதிப்பாடு
-</p>
-
-<div class="commitment-box">
-
-    <p>
-        இவ்விதழ் ஆய்வின் தரம், கல்வியியல் நேர்மை, அறிவுசார் பொறுப்பு,
-        வெளிப்படையான மதிப்பாய்வு மற்றும் ஆய்வாளர்களின் பங்களிப்பு
-        ஆகியவற்றை அடிப்படையாகக் கொண்டு செயல்படுகிறது.
-    </p>
-
-</div>
-```
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
+</main>
 
 <footer>
 
-```
-<p>
-    <strong>தமிழியல் பரிமாணங்கள்</strong>
-</p>
+    <p>
+        © 2026 தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)
+    </p>
 
-<p>
-    Dimensions of Tamil Studies
-</p>
-
-<p>
-    Peer-Reviewed Quarterly International Journal of Tamil Studies
-</p>
-
-<p>
-    Pollachi, Tamil Nadu, India
-</p>
-
-<p>
-    📧 t.geethanjalingmc@gmail.com
-</p>
-
-<p style="margin-top:12px;">
-    © 2026 தமிழியல் பரிமாணங்கள். All Rights Reserved.
-</p>
-```
+    <p>
+        International Peer-Reviewed Quarterly E-Journal
+    </p>
 
 </footer>
 
