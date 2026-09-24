@@ -1,133 +1,208 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>தொடர்பு | தமிழியல் பரிமாணங்கள்</title>
-<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர், வெளியீட்டாளர், தொடர்பு முகவரி, மின்னஞ்சல், வெளியீட்டு விவரங்கள் மற்றும் இதழைத் தொடர்புகொள்ளும் தகவல்கள்.">
+
+<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர், வெளியீட்டாளர், தொடர்பு முகவரி, மின்னஞ்சல் மற்றும் வெளியீட்டு விவரங்கள்.">
+
 <style>
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f5f3fa;
-    color: #333;
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-header {
-    background: linear-gradient(135deg, #6a1b9a, #00897b);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+header h1{
+    margin:0 0 2px;
+    font-size:32px;
+    font-weight:700;
 }
 
-header h2 {
-    margin: 8px 0;
-    font-size: 22px;
+header p{
+    margin:3px 0;
+    font-size:16px;
 }
 
-header p {
-    margin: 6px 0;
-    font-size: 16px;
+header p:last-child{
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-nav {
-    background: #3f1766;
-    text-align: center;
-    padding: 12px 5px;
+nav{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:8px 10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 15px;
+nav a{
+    color:#312e81;
+    text-decoration:none;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 35px auto;
-    padding: 0 20px;
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+.content-box{
+    background:white;
+    padding:22px;
+    margin-bottom:12px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.07);
+    border-top:4px solid #312e81;
 }
 
-.card h2 {
-    color: #6a1b9a;
-    margin-top: 0;
+.content-box h2{
+    color:#312e81;
+    margin:0 0 10px;
+    font-size:22px;
 }
 
-.contact-info {
-    line-height: 1.9;
-    font-size: 16px;
+.content-box p{
+    margin:0 0 10px;
+    line-height:1.75;
 }
 
-.email-box {
-    background: #f0eafa;
-    padding: 18px;
-    border-left: 5px solid #6a1b9a;
-    border-radius: 8px;
-    margin-top: 20px;
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
 }
 
-.email-address {
-    font-weight: bold;
-    color: #6a1b9a;
-    font-size: 17px;
-    word-break: break-word;
+.info-item{
+    background:#f8f7ff;
+    padding:12px 15px;
+    border-radius:9px;
+    border-left:4px solid #312e81;
 }
 
-.note {
-    background: #e8f5f3;
-    padding: 18px;
-    border-left: 5px solid #00897b;
-    border-radius: 8px;
-    line-height: 1.8;
+.info-item strong{
+    color:#312e81;
 }
 
-footer {
-    background: #3f1766;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-    margin-top: 40px;
+.email-box{
+    margin-top:15px;
+    padding:15px 18px;
+    background:#f0eafa;
+    border-left:5px solid #312e81;
+    border-radius:9px;
 }
 
-footer p {
-    margin: 6px 0;
+.email-address{
+    margin:4px 0 0 !important;
+    color:#312e81;
+    font-weight:700;
+    font-size:17px;
+    word-break:break-word;
 }
 
-@media (max-width: 700px) {
-    header h1 {
-        font-size: 26px;
+.note{
+    background:#eef7f6;
+    padding:15px 18px;
+    border-left:5px solid #00897b;
+    border-radius:9px;
+}
+
+.note p{
+    margin:0 0 8px;
+}
+
+.note p:last-child{
+    margin-bottom:0;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
+}
+
+footer strong{
+    font-size:17px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
     }
 
-    header h2 {
-        font-size: 19px;
+    header h1{
+        font-size:26px;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 6px;
+    header p{
+        font-size:14px;
     }
 
-    .card {
-        padding: 22px;
+    nav{
+        padding:7px 6px;
+        gap:3px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 10px;
+    }
+
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .content-box{
+        padding:17px;
+        margin-bottom:10px;
+    }
+
+    .content-box h2{
+        font-size:20px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    footer{
+        padding:20px 12px;
+        font-size:14px;
     }
 }
 </style>
@@ -137,7 +212,7 @@ footer p {
 
 <header>
     <h1>தமிழியல் பரிமாணங்கள்</h1>
-    <h2>Dimensions of Tamil Studies</h2>
+    <p>Dimensions of Tamil Studies</p>
     <p>An International Peer-Reviewed Quarterly E-Journal</p>
     <p>Pollachi, Tamil Nadu, India</p>
 </header>
@@ -159,66 +234,63 @@ footer p {
 
 <div class="container">
 
-    <div class="card">
+    <div class="content-box">
+
         <h2>தொடர்பு கொள்ள</h2>
 
-        <div class="contact-info">
+        <div class="info-grid">
 
-            <p>
-                <strong>இதழின் பெயர்:</strong><br>
+            <div class="info-item">
+                <strong>இதழின் பெயர்</strong><br>
                 தமிழியல் பரிமாணங்கள்
-            </p>
+            </div>
 
-            <p>
-                <strong>English Title:</strong><br>
+            <div class="info-item">
+                <strong>English Title</strong><br>
                 Dimensions of Tamil Studies
-            </p>
+            </div>
 
-            <p>
-                <strong>Editor-in-Chief:</strong><br>
+            <div class="info-item">
+                <strong>Editor-in-Chief</strong><br>
                 Dr. T. Geethanjali, M.A., M.Phil., Ph.D., NET
-            </p>
+            </div>
 
-            <p>
-                <strong>Publisher:</strong><br>
+            <div class="info-item">
+                <strong>Publisher</strong><br>
                 Dr. T. Geethanjali
-            </p>
+            </div>
 
-            <p>
-                <strong>Place:</strong><br>
+            <div class="info-item">
+                <strong>Place</strong><br>
                 Pollachi, Tamil Nadu, India
-            </p>
+            </div>
 
-            <p>
-                <strong>Frequency:</strong><br>
+            <div class="info-item">
+                <strong>Frequency</strong><br>
                 Quarterly – ஆண்டிற்கு நான்கு முறை
-            </p>
+            </div>
 
-            <p>
-                <strong>Format:</strong><br>
+            <div class="info-item">
+                <strong>Format</strong><br>
                 Online E-Journal
-            </p>
+            </div>
 
-            <p>
-                <strong>ISSN:</strong><br>
-                To be Assigned
-            </p>
+            <div class="info-item">
+                <strong>ISSN</strong><br>
+                Not Assigned
+            </div>
 
         </div>
 
         <div class="email-box">
-
-            <strong>Official Email:</strong>
-
-            <p class="email-address">
-                t.geethanjalingmc@gmail.com
-            </p>
-
+            <strong>Official Email</strong>
+            <p class="email-address">t.geethanjalingmc@gmail.com</p>
         </div>
+
     </div>
 
 
-    <div class="card">
+    <div class="content-box">
 
         <h2>ஆய்வுக் கட்டுரை சமர்ப்பிப்பு</h2>
 
@@ -244,7 +316,7 @@ footer p {
     </div>
 
 
-    <div class="card">
+    <div class="content-box">
 
         <h2>முக்கிய குறிப்பு</h2>
 
@@ -253,8 +325,7 @@ footer p {
             <p>
                 ஆய்வுக் கட்டுரையைச் சமர்ப்பிப்பதற்கு முன்,
                 இதழின் ஆசிரியர் வழிகாட்டுதல்களை முழுமையாகப்
-                படித்து, தேவையான அனைத்து விவரங்களையும்
-                சரிபார்க்கவும்.
+                படித்து, தேவையான அனைத்து விவரங்களையும் சரிபார்க்கவும்.
             </p>
 
             <p>
@@ -273,15 +344,9 @@ footer p {
 <footer>
 
     <p><strong>தமிழியல் பரிமாணங்கள்</strong></p>
-
     <p>Dimensions of Tamil Studies</p>
-
     <p>An International Peer-Reviewed Quarterly E-Journal</p>
-
-    <p>
-        © 2026 தமிழியல் பரிமாணங்கள் |
-        Pollachi, Tamil Nadu, India
-    </p>
+    <p>© 2026 தமிழியல் பரிமாணங்கள் | Pollachi, Tamil Nadu, India</p>
 
 </footer>
 
