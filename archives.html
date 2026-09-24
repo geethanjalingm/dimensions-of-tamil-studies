@@ -1,215 +1,293 @@
 <!DOCTYPE html>
-
 <html lang="ta">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Archives | தமிழியல் பரிமாணங்கள்</title>
+<title>Archives – தமிழியல் பரிமாணங்கள்</title>
 
 <meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் தொகுதி மற்றும் இதழ் வெளியீடுகள், ஆய்வுக் கட்டுரைகள் மற்றும் காப்பகத் தகவல்கள்.">
 
 <style>
+*{box-sizing:border-box;}
 
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f7f4fb;
-    color: #333;
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-header {
-    background: linear-gradient(135deg, #5b247a, #1bcedf);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.15);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 32px;
+header h1{
+    margin:0 0 2px;
+    font-size:32px;
+    font-weight:700;
 }
 
-header p {
-    margin: 8px 0 0;
-    font-size: 17px;
+header p{
+    margin:3px 0;
+    font-size:16px;
 }
 
-nav {
-    background: #3f1763;
-    text-align: center;
-    padding: 14px 5px;
+header p:last-child{
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 15px;
+nav{
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:4px;
+    padding:8px 10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:100;
 }
 
-nav a:hover {
-    text-decoration: underline;
+nav a{
+    color:#312e81;
+    text-decoration:none;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:14px;
+    font-weight:600;
 }
 
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+nav a:hover{
+    background:#312e81;
+    color:white;
 }
 
-.page-title {
-    text-align: center;
-    color: #5b247a;
-    font-size: 30px;
-    margin-bottom: 30px;
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-.content-box {
-    background: white;
-    padding: 30px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+.page-title{
+    text-align:center;
+    color:#312e81;
+    font-size:28px;
+    margin:0 0 20px;
 }
 
-h2 {
-    color: #5b247a;
-    font-size: 22px;
-    margin-top: 0;
-    border-left: 5px solid #1bcedf;
-    padding-left: 12px;
+.page-title span{
+    font-size:20px;
+    font-weight:600;
 }
 
-details {
-    margin: 15px 0;
+.content-box{
+    background:white;
+    padding:22px;
+    margin-bottom:12px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.07);
+    border-top:4px solid #312e81;
 }
 
-details summary {
-    cursor: pointer;
-    list-style: none;
-    background: #f3eef8;
-    padding: 15px 20px;
-    border-left: 5px solid #5b247a;
-    border-radius: 8px;
-    color: #3f1763;
-    font-weight: bold;
+.content-box h2{
+    color:#312e81;
+    margin:0 0 10px;
+    font-size:22px;
 }
 
-details summary::-webkit-details-marker {
-    display: none;
+.content-box p{
+    margin:0 0 10px;
+    line-height:1.75;
 }
 
-p {
-    line-height: 1.8;
+.content-box ul{
+    margin:8px 0 0;
+    padding-left:25px;
+    line-height:1.75;
 }
 
-.issue {
-    background: #faf8fd;
-    border-left: 5px solid #5b247a;
-    padding: 18px 20px;
-    margin: 15px 0;
-    border-radius: 8px;
+.content-box li{
+    margin-bottom:4px;
 }
 
-.issue h3 {
-    margin-top: 0;
-    color: #3f1763;
+details{
+    margin:10px 0;
 }
 
-.coming {
-    color: #5b247a;
-    font-weight: bold;
+details summary{
+    cursor:pointer;
+    list-style:none;
+    background:#eef2ff;
+    padding:12px 16px;
+    border-left:5px solid #312e81;
+    border-radius:8px;
+    color:#312e81;
+    font-weight:600;
 }
 
-.article-content {
-    background: #f3eef8;
-    border-left: 5px solid #1bcedf;
-    padding: 18px 20px;
-    margin: 12px 0;
-    border-radius: 8px;
+details summary::-webkit-details-marker{
+    display:none;
 }
 
-footer {
-    background: #3f1763;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    margin-top: 50px;
+.issue{
+    background:#fafbff;
+    border-left:4px solid #4c1d95;
+    padding:14px;
+    margin:10px 0;
+    border-radius:8px;
 }
 
-footer p {
-    margin: 6px 0;
+.issue h3{
+    margin:0;
+    color:#312e81;
+    font-size:19px;
 }
 
-@media (max-width: 700px) {
+.coming{
+    color:#312e81;
+    font-weight:700;
+}
 
-    nav a {
-        display: inline-block;
-        margin: 6px 8px;
+.article-content{
+    background:#f8f9ff;
+    border-left:4px solid #6366f1;
+    padding:15px 18px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.article-content p{
+    margin-bottom:9px;
+}
+
+.article-content a{
+    color:#312e81;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.article-content a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
+}
+
+footer p{
+    margin:5px 0;
+}
+
+footer strong{
+    font-size:17px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
     }
 
-    header h1 {
-        font-size: 26px;
+    header h1{
+        font-size:26px;
     }
 
-    .content-box {
-        padding: 22px;
+    header p{
+        font-size:14px;
     }
 
+    nav{
+        padding:7px 6px;
+        gap:3px;
+    }
+
+    nav a{
+        font-size:13px;
+        padding:6px 10px;
+    }
+
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .page-title{
+        font-size:24px;
+    }
+
+    .page-title span{
+        font-size:18px;
+    }
+
+    .content-box{
+        padding:17px;
+        margin-bottom:10px;
+    }
+
+    .content-box h2{
+        font-size:20px;
+    }
+
+    .content-box ul{
+        padding-left:22px;
+    }
+
+    .issue{
+        padding:11px;
+    }
+
+    .article-content{
+        padding:13px;
+    }
+
+    footer{
+        padding:20px 12px;
+        font-size:14px;
+    }
 }
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
-<h1>தமிழியல் பரிமாணங்கள்</h1>
-
-<p>Dimensions of Tamil Studies</p>
-
-<p>An International Peer-Reviewed Quarterly E-Journal</p>
-
+    <h1>தமிழியல் பரிமாணங்கள்</h1>
+    <p>Dimensions of Tamil Studies</p>
+    <p>An International Peer-Reviewed Quarterly E-Journal</p>
 </header>
 
 <nav>
-
-<a href="index.html">Home</a>
-
-<a href="about.html">About</a>
-
-<a href="aims-scope.html">Aims & Scope</a>
-
-<a href="editorial-board.html">Editorial Board</a>
-
-<a href="author-guidelines.html">Author Guidelines</a>
-
-<a href="peer-review.html">Peer Review</a>
-
-<a href="ethics.html">Ethics</a>
-
-<a href="archives.html">Archives</a>
-
-<a href="contact.html">Contact</a>
-
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="aims-scope.html">Aims &amp; Scope</a>
+    <a href="editorial-board.html">Editorial Board</a>
+    <a href="author-guidelines.html">Author Guidelines</a>
+    <a href="peer-review.html">Peer Review</a>
+    <a href="ethics.html">Ethics</a>
+    <a href="archives.html">Archives</a>
+    <a href="contact.html">Contact</a>
 </nav>
 
 <div class="container">
 
 <h1 class="page-title">
-
-இதழ் தொகுப்புகள்
-
-<br>
-
-<span style="font-size:22px;">Archives</span>
-
+    இதழ் தொகுப்புகள்
+    <br>
+    <span>Archives</span>
 </h1>
 
 <div class="content-box">
@@ -217,266 +295,173 @@ footer p {
 <h2>இதழ் தொகுப்பு – அறிமுகம்</h2>
 
 <p>
-
 <strong>தமிழியல் பரிமாணங்கள் (Dimensions of Tamil Studies)</strong>
 ஒரு <strong>சர்வதேச சக மதிப்பாய்வு செய்யப்பட்ட காலாண்டு மின்னிதழ்</strong>
 ஆகும்.
-
 </p>
 
 <p>
-
 இவ்விதழ் ஆண்டிற்கு நான்கு இதழ்கள் என்ற அடிப்படையில்
 காலாண்டு முறையில் வெளியிட திட்டமிடப்பட்டுள்ளது.
-
 </p>
 
 </div>
-
-<!-- VOLUME 1 -->
 
 <div class="content-box">
 
 <details>
 
 <summary>
-
 <h2 style="display:inline;">Volume 1 – 2026</h2>
-
 </summary>
-
-<!-- ISSUE 1 -->
 
 <div class="issue">
 
 <details>
 
 <summary>
-
-<h3 style="display:inline;">
-Volume 1, Issue 1 – March
-</h3>
-
+<h3 style="display:inline;">Volume 1, Issue 1 – March</h3>
 </summary>
 
-<p>
-முதல் இதழ்
-</p>
+<p>முதல் இதழ்</p>
 
-<p>
-இவ்விதழில் வெளியிடப்பட்ட ஆய்வுக் கட்டுரைகள்:
-</p>
-
-<!-- ARTICLE 1 -->
+<p>இவ்விதழில் வெளியிடப்பட்ட ஆய்வுக் கட்டுரைகள்:</p>
 
 <details>
 
 <summary>
-
 <h3 style="display:inline;">
 திலகவதி சிறுகதைகளில் பெண்களின் சமூகச் சிக்கல்கள்
 </h3>
-
 <br>
-
-<span style="font-size:15px; font-weight:normal;">
+<span style="font-size:15px;font-weight:normal;">
 முனைவர் த. கீதாஞ்சலி
 </span>
-
 </summary>
 
 <div class="article-content">
 
 <p>
-
 <strong>Social Issues of Women in Thilagavathi’s Short Stories</strong>
-
 </p>
 
 <p>
-
 <strong>ஆசிரியர்:</strong>
 முனைவர் த. கீதாஞ்சலி
-
 </p>
 
 <p>
-
 <strong>Abstract:</strong>
-
 Women’s issues have occupied an important place in contemporary Tamil literature, particularly in the short stories of Thilagavathi. Her short stories portray the various social challenges faced by women within the family and society and reveal the impact of patriarchal attitudes on their lives. This article examines the representation of women-related social issues in Thilagavathi’s short stories, with particular focus on the neglect of the girl child, sexual violence, harassment of women, and the problems encountered by working women. It also analyses the ways in which women respond to these challenges and the consequences arising from such social conditions. The discussion highlights gender discrimination, the preference for male children, and socio-economic factors associated with marriage expenses and dowry. Thus, Thilagavathi’s short stories serve as a literary representation of women’s struggles and contribute to creating awareness about gender equality and social change.
-
 </p>
 
 <p>
-
 <strong>Keywords:</strong>
-
 Thilagavathi, Tamil Short Stories, Women’s Issues, Girl Child Neglect, Gender Discrimination, Patriarchy, Women’s Empowerment, Social Problems
-
 </p>
 
 <p>
-
 <a href="aluval%20makalir.pdf" target="_blank">
-
 ஆய்வுக் கட்டுரையைப் படிக்க – PDF
-
 </a>
-
 </p>
 
 </div>
-
 </details>
-
-<!-- ARTICLE 2 -->
 
 <details>
 
 <summary>
-
 <h3 style="display:inline;">
 சங்கப்பாடல்களில் படிமங்களும் குறியீடும்
 </h3>
-
 <br>
-
-<span style="font-size:15px; font-weight:normal;">
+<span style="font-size:15px;font-weight:normal;">
 முனைவர் வ. கிருஷ்ணன்
 </span>
-
 </summary>
 
 <div class="article-content">
 
 <p>
-
 <strong>Imagery and Symbolism in Sangam Poems</strong>
-
 </p>
 
 <p>
-
 <strong>ஆசிரியர்:</strong>
 முனைவர் வ. கிருஷ்ணன்
-
 </p>
 
 <p>
-
 <strong>பதவி:</strong>
 துறைத்தலைவர், அரசு கலைக்கல்லூரி, உடுமலைப்பேட்டை
-
 </p>
 
 <p>
-
 <strong>Abstract:</strong>
-
 This research article examines the use of imagery and symbolism in Sangam poetry, with particular attention to the poems of Sangam poets such as Avvaiyar, Devakulaththar, and Kapilar. Sangam literature serves as an important repository of the historical, social, cultural, and emotional experiences of ancient Tamil society. In these poems, imagery and symbols play a significant role in expressing subtle emotions, relationships, experiences, and ideas through vivid verbal pictures. The study reveals that imagery and symbolism enhance the aesthetic quality of Sangam poetry while also enabling poets to communicate complex human emotions in a concise and evocative manner. Thus, the imaginative techniques employed in Sangam poetry contribute significantly to its enduring literary and cultural value.
-
 </p>
 
 <p>
-
 <strong>Keywords:</strong>
-
 Sangam Literature, Sangam Poetry, Imagery, Symbolism, Simile, Metaphor, Avvaiyar, Kapilar, Devakulaththar, Tamil Literature
-
 </p>
 
 <p>
-
-<a href="%E0%AE%9A%E0%AE%99%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%81%E0%AE%AE%E0%AF%8D%20%20%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%BF%E0%AE%AF%E0%AF%80%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D.pdf" target="_blank">
-
+<a href="%E0%AE%9A%E0%AE%99%E0%AE%AA%E0%AE%BE%E0%AE%9F%E0%AE%B2%E0%AF%8D%E0%AE%95%E0%AE%B3%E0%AF%81%E0%AE%AE%E0%AF%8D%20%20%20%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%AE%E0%AF%80%E0%AE%9F%E0%AF%81.pdf" target="_blank">
 ஆய்வுக் கட்டுரையைப் படிக்க – PDF
-
 </a>
-
 </p>
 
 </div>
-
 </details>
 
 </details>
-
 </div>
-
-<!-- ISSUE 2 -->
 
 <div class="issue">
 
 <details>
 
 <summary>
-
-<h3 style="display:inline;">
-Volume 1, Issue 2 – June
-</h3>
-
+<h3 style="display:inline;">Volume 1, Issue 2 – June</h3>
 </summary>
 
-<p>
-இரண்டாவது இதழ்
-</p>
+<p>இரண்டாவது இதழ்</p>
 
-<p class="coming">
-விரைவில்
-</p>
+<p class="coming">விரைவில்</p>
 
 </details>
 
 </div>
-
-<!-- ISSUE 3 -->
 
 <div class="issue">
 
 <details>
 
 <summary>
-
-<h3 style="display:inline;">
-Volume 1, Issue 3 – September
-</h3>
-
+<h3 style="display:inline;">Volume 1, Issue 3 – September</h3>
 </summary>
 
-<p>
-மூன்றாவது இதழ்
-</p>
+<p>மூன்றாவது இதழ்</p>
 
-<p class="coming">
-விரைவில்
-</p>
+<p class="coming">விரைவில்</p>
 
 </details>
 
 </div>
-
-<!-- ISSUE 4 -->
 
 <div class="issue">
 
 <details>
 
 <summary>
-
-<h3 style="display:inline;">
-Volume 1, Issue 4 – December
-</h3>
-
+<h3 style="display:inline;">Volume 1, Issue 4 – December</h3>
 </summary>
 
-<p>
-நான்காவது இதழ்
-</p>
+<p>நான்காவது இதழ்</p>
 
-<p class="coming">
-விரைவில்
-</p>
+<p class="coming">விரைவில்</p>
 
 </details>
 
@@ -485,31 +470,16 @@ Volume 1, Issue 4 – December
 </details>
 
 </div>
-
-<!-- ENGLISH ARCHIVE STRUCTURE -->
 
 <div class="content-box">
 
 <h2>English Archive Structure</h2>
 
 <ul>
-
-<li>
-Volume 1, Issue 1 – March | Submission: February 20–28
-</li>
-
-<li>
-Volume 1, Issue 2 – June | Submission: May 20–31
-</li>
-
-<li>
-Volume 1, Issue 3 – September | Submission: August 20–31
-</li>
-
-<li>
-Volume 1, Issue 4 – December | Submission: November 20–30
-</li>
-
+<li>Volume 1, Issue 1 – March | Submission: February 20–28</li>
+<li>Volume 1, Issue 2 – June | Submission: May 20–31</li>
+<li>Volume 1, Issue 3 – September | Submission: August 20–31</li>
+<li>Volume 1, Issue 4 – December | Submission: November 20–30</li>
 </ul>
 
 </div>
@@ -518,28 +488,13 @@ Volume 1, Issue 4 – December | Submission: November 20–30
 
 <footer>
 
-<p>
-<strong>தமிழியல் பரிமாணங்கள்</strong>
-</p>
-
-<p>
-Dimensions of Tamil Studies
-</p>
-
-<p>
-An International Peer-Reviewed Quarterly E-Journal
-</p>
-
-<p>
-© 2026 All Rights Reserved
-</p>
-
-<p>
-Pollachi, Tamil Nadu, India
-</p>
+<p><strong>தமிழியல் பரிமாணங்கள்</strong></p>
+<p>Dimensions of Tamil Studies</p>
+<p>An International Peer-Reviewed Quarterly E-Journal</p>
+<p>© 2026 All Rights Reserved</p>
+<p>Pollachi, Tamil Nadu, India</p>
 
 </footer>
 
 </body>
-
 </html>
