@@ -1,133 +1,174 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ta">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Editor – Article Status Update</title>
-<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர் பயன்பாட்டிற்கான கட்டுரை நிலை மேலாண்மை பக்கம். Article ID மூலம் சமர்ப்பிக்கப்பட்ட கட்டுரையின் தற்போதைய நிலையைப் புதுப்பிக்கும் வசதி.">
+<title>Editor – Article Status Update | தமிழியல் பரிமாணங்கள்</title>
+
+<meta name="description" content="தமிழியல் பரிமாணங்கள் இதழின் ஆசிரியர் பயன்பாட்டிற்கான கட்டுரை நிலை மேலாண்மை பக்கம். Article ID மூலம் கட்டுரையின் தற்போதைய நிலையைப் புதுப்பிக்கும் வசதி.">
+
 <style>
-body {
-    margin: 0;
-    font-family: "Noto Sans Tamil", Arial, sans-serif;
-    background: #f4f1fb;
-    color: #29213d;
+*{box-sizing:border-box;}
+
+body{
+    margin:0;
+    font-family:"Noto Sans Tamil","Latha","Arial",sans-serif;
+    background:#f5f7fb;
+    color:#263238;
+    line-height:1.7;
 }
 
-header {
-    background: linear-gradient(135deg, #5b2c83, #167c80);
-    color: white;
-    text-align: center;
-    padding: 35px 20px;
+header{
+    background:linear-gradient(135deg,#172554,#312e81,#4c1d95);
+    color:white;
+    text-align:center;
+    padding:22px 20px 17px;
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-header h1 {
-    margin: 0 0 8px;
-    font-size: 30px;
+header h1{
+    margin:0 0 3px;
+    font-size:30px;
+    font-weight:700;
 }
 
-header p {
-    margin: 0;
-    font-size: 16px;
+header p{
+    margin:3px 0;
+    font-size:16px;
+    color:#e0e7ff;
+    font-weight:600;
 }
 
-.container {
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 0 20px;
+.container{
+    width:92%;
+    max-width:850px;
+    margin:0 auto;
+    padding:28px 0;
 }
 
-.card {
-    background: white;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+.card{
+    background:white;
+    padding:24px;
+    border-radius:14px;
+    box-shadow:0 4px 12px rgba(0,0,0,.07);
+    border-top:4px solid #312e81;
 }
 
-h2 {
-    color: #5b2c83;
-    margin-top: 0;
+.card h2{
+    color:#312e81;
+    margin:0 0 14px;
+    font-size:22px;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 18px;
-    margin-bottom: 7px;
+label{
+    display:block;
+    font-weight:700;
+    color:#312e81;
+    margin:13px 0 6px;
 }
 
 input,
-select {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 13px;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    font-size: 16px;
-    font-family: inherit;
+select{
+    width:100%;
+    padding:11px 13px;
+    border:1px solid #cbd5e1;
+    border-radius:7px;
+    font-size:15px;
+    font-family:inherit;
+    background:white;
+    outline:none;
 }
 
-button {
-    margin-top: 25px;
-    width: 100%;
-    padding: 14px;
-    background: #5b2c83;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
+input:focus,
+select:focus{
+    border-color:#312e81;
+    box-shadow:0 0 0 2px #e0e7ff;
 }
 
-button:hover {
-    background: #462067;
+button{
+    width:100%;
+    margin-top:20px;
+    padding:11px;
+    background:#312e81;
+    color:white;
+    border:none;
+    border-radius:7px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
 }
 
-.message {
-    display: none;
-    margin-top: 25px;
-    padding: 18px;
-    border-radius: 8px;
-    line-height: 1.7;
+button:hover{
+    background:#4c1d95;
 }
 
-.success {
-    display: block;
-    background: #e8f7ed;
-    color: #176b36;
-    border: 1px solid #a8dfba;
+.message{
+    display:none;
+    margin-top:18px;
+    padding:15px;
+    border-radius:9px;
+    line-height:1.7;
 }
 
-.error {
-    display: block;
-    background: #fdecec;
-    color: #a12626;
-    border: 1px solid #efb1b1;
+.success{
+    display:block;
+    background:#eef9f3;
+    color:#176b36;
+    border-left:5px solid #198754;
 }
 
-.note {
-    margin-top: 25px;
-    padding: 18px;
-    background: #f3effa;
-    border-left: 5px solid #5b2c83;
-    line-height: 1.7;
+.error{
+    display:block;
+    background:#fff1f2;
+    color:#a12626;
+    border-left:5px solid #dc3545;
 }
 
-footer {
-    text-align: center;
-    padding: 25px;
-    color: #666;
-    font-size: 14px;
+.note{
+    margin-top:18px;
+    padding:15px 17px;
+    background:#fffaf0;
+    border-left:5px solid #d97706;
+    border-radius:8px;
+    font-size:14px;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 23px;
+footer{
+    background:#172554;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+    margin-top:10px;
+    line-height:1.7;
+    font-size:14px;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:20px 15px 15px;
     }
 
-    .card {
-        padding: 20px;
+    header h1{
+        font-size:24px;
+    }
+
+    header p{
+        font-size:14px;
+    }
+
+    .container{
+        width:94%;
+        padding:22px 0;
+    }
+
+    .card{
+        padding:18px;
+    }
+
+    .card h2{
+        font-size:20px;
     }
 }
 </style>
@@ -136,57 +177,119 @@ footer {
 <body>
 
 <header>
+
     <h1>Editor – Article Status Update</h1>
+
     <p>தமிழியல் பரிமாணங்கள்</p>
+
 </header>
 
 <div class="container">
 
-<div class="card">
+    <div class="card">
 
-<h2>Article Status Update</h2>
+        <h2>Article Status Update</h2>
 
-<label for="articleId">Article ID</label>
-<input type="text" id="articleId" placeholder="Example: DTS-2026-001">
+        <label for="articleId">
+            Article ID
+        </label>
 
-<label for="submissionId">Forminit Submission ID</label>
-<input type="text" id="submissionId" placeholder="Example: sub_xy0yVWEFHrrYMciP">
+        <input
+            type="text"
+            id="articleId"
+            placeholder="Example: DTS-2026-001"
+        >
 
-<label for="articleTitle">Article Title</label>
-<input type="text" id="articleTitle" placeholder="Article title">
+        <label for="submissionId">
+            Forminit Submission ID
+        </label>
 
-<label for="status">Article Status</label>
+        <input
+            type="text"
+            id="submissionId"
+            placeholder="Example: sub_xy0yVWEFHrrYMciP"
+        >
 
-<select id="status">
-    <option value="Submitted">Submitted</option>
-    <option value="Under Editorial Screening">Under Editorial Screening</option>
-    <option value="Peer Review">Peer Review</option>
-    <option value="Revision Required">Revision Required</option>
-    <option value="Final Editorial Decision">Final Editorial Decision</option>
-    <option value="Accepted">Accepted</option>
-    <option value="Rejected">Rejected</option>
-    <option value="Published">Published</option>
-</select>
+        <label for="articleTitle">
+            Article Title
+        </label>
 
-<button type="button" id="saveButton">
-    Save Article Status
-</button>
+        <input
+            type="text"
+            id="articleTitle"
+            placeholder="Article title"
+        >
 
-<div id="message" class="message"></div>
+        <label for="status">
+            Article Status
+        </label>
 
-<div class="note">
-    <strong>Editor Note:</strong><br>
-    Status updates made here are sent to the journal's Google Sheet
-    and can then be displayed on the Author Article Status page.
-</div>
+        <select id="status">
 
-</div>
+            <option value="Submitted">
+                Submitted
+            </option>
+
+            <option value="Under Editorial Screening">
+                Under Editorial Screening
+            </option>
+
+            <option value="Peer Review">
+                Peer Review
+            </option>
+
+            <option value="Revision Required">
+                Revision Required
+            </option>
+
+            <option value="Final Editorial Decision">
+                Final Editorial Decision
+            </option>
+
+            <option value="Accepted">
+                Accepted
+            </option>
+
+            <option value="Rejected">
+                Rejected
+            </option>
+
+            <option value="Published">
+                Published
+            </option>
+
+        </select>
+
+        <button type="button" id="saveButton">
+            Save Article Status
+        </button>
+
+        <div id="message" class="message"></div>
+
+        <div class="note">
+
+            <strong>Editor Note:</strong><br>
+
+            Status updates made here are sent to the
+            journal's Google Sheet and can then be displayed
+            on the Author Article Status page.
+
+        </div>
+
+    </div>
+
 </div>
 
 <footer>
-    தமிழியல் பரிமாணங்கள் – Dimensions of Tamil Studies<br>
-    An International Peer-Reviewed Quarterly E-Journal<br>
-    © 2026 | Pollachi, Tamil Nadu, India
+
+    <div><strong>தமிழியல் பரிமாணங்கள்</strong></div>
+
+    <div>Dimensions of Tamil Studies</div>
+
+    <div>An International Peer-Reviewed Quarterly E-Journal</div>
+
+    <div>© 2026 | Pollachi, Tamil Nadu, India</div>
+
 </footer>
 
 <script>
@@ -194,11 +297,10 @@ footer {
 const WEB_APP_URL =
 "https://script.google.com/macros/s/AKfycbwGxRuoZvGndujcsk3ujiV0ky041R9aEnbvhJybECA1UPlo_m74YWbQPscAskQq3xIX8A/exec";
 
+document.getElementById("saveButton")
+    .addEventListener("click", saveStatus);
 
-document.getElementById("saveButton").addEventListener("click", saveStatus);
-
-
-async function saveStatus() {
+async function saveStatus(){
 
     const articleId =
         document.getElementById("articleId").value.trim();
@@ -215,10 +317,9 @@ async function saveStatus() {
     const message =
         document.getElementById("message");
 
+    if(!articleId || !status){
 
-    if (!articleId || !status) {
-
-        message.className = "message error";
+        message.className="message error";
 
         message.innerHTML =
             "<strong>Article ID மற்றும் Status அவசியம்.</strong>";
@@ -226,54 +327,43 @@ async function saveStatus() {
         return;
     }
 
-
-    message.className = "message";
-
-    message.style.display = "block";
+    message.className="message";
+    message.style.display="block";
 
     message.innerHTML =
         "தயவுசெய்து காத்திருக்கவும்...";
 
+    try{
 
-    try {
+        const formData =
+            new URLSearchParams();
 
-        const formData = new URLSearchParams();
+        formData.append("articleId",articleId);
+        formData.append("submissionId",submissionId);
+        formData.append("articleTitle",articleTitle);
+        formData.append("status",status);
 
-        formData.append("articleId", articleId);
+        const response =
+            await fetch(WEB_APP_URL,{
+                method:"POST",
+                body:formData
+            });
 
-        formData.append("submissionId", submissionId);
+        const result =
+            await response.text();
 
-        formData.append("articleTitle", articleTitle);
+        if(result.trim()==="SUCCESS"){
 
-        formData.append("status", status);
-
-
-        const response = await fetch(WEB_APP_URL, {
-
-            method: "POST",
-
-            body: formData
-
-        });
-
-
-        const result = await response.text();
-
-
-        if (result.trim() === "SUCCESS") {
-
-            message.className = "message success";
+            message.className="message success";
 
             message.innerHTML =
                 "<strong>Article Status successfully updated.</strong><br><br>" +
                 "Article ID: " + articleId +
                 "<br>Current Status: " + status;
 
-        }
+        }else{
 
-        else {
-
-            message.className = "message error";
+            message.className="message error";
 
             message.innerHTML =
                 "<strong>Article ID கிடைக்கவில்லை.</strong><br><br>" +
@@ -281,11 +371,9 @@ async function saveStatus() {
 
         }
 
-    }
+    }catch(error){
 
-    catch (error) {
-
-        message.className = "message error";
+        message.className="message error";
 
         message.innerHTML =
             "<strong>Update செய்ய முடியவில்லை.</strong><br><br>" +
