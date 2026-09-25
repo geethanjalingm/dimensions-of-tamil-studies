@@ -1182,6 +1182,11 @@ footer p{
 </p>
 
 <p style="margin-top:10px;">
+    👁️ Total Visitors:
+    <span id="visitor-count">Loading...</span>
+</p>
+
+<p style="margin-top:10px;">
     © 2026 தமிழியல் பரிமாணங்கள். All Rights Reserved.
 </p>
 
@@ -1189,6 +1194,17 @@ footer p{
 
 <script data-goatcounter="https://geethanjali.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
+
+<script>
+fetch("https://geethanjali.goatcounter.com/counter/TOTAL.json")
+  .then(response => response.json())
+  .then(data => {
+    document.getElementById("visitor-count").textContent = data.count;
+  })
+  .catch(error => {
+    document.getElementById("visitor-count").textContent = "—";
+  });
+</script>
 
 </body>
 </html>
