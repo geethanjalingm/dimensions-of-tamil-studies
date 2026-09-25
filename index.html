@@ -1190,15 +1190,9 @@ footer p{
 </p>
 
 </footer>
-<script>
-fetch("https://api.counterapi.dev/v1/tamiliyalparimanangal/visits/up")
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById("visitor-count").textContent = data.count;
-  })
-  .catch(error => {
-    document.getElementById("visitor-count").textContent = "—";
-  });
+
 </script>
+    <script data-goatcounter="https://geethanjali.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
