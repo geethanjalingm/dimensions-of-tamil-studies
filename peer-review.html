@@ -127,6 +127,53 @@ nav a:hover{
     border-radius:8px;
 }
 
+
+/* ================= PEER REVIEW PROCESS ================= */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:20px;
+}
+
+.process-step{
+    background:#f8fafc;
+    border:1px solid #e0e7ff;
+    border-radius:14px;
+    padding:20px 16px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 3px 10px rgba(0,0,0,0.05);
+}
+
+.step-number{
+    width:42px;
+    height:42px;
+    margin:0 auto 10px;
+    border-radius:50%;
+    background:#4f46e5;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:700;
+}
+
+.process-step h3{
+    margin:5px 0 8px;
+    color:#312e81;
+    font-size:18px;
+}
+
+.process-step p{
+    margin:0;
+    font-size:14px;
+    line-height:1.65;
+}
+
+
 /* ================= REVIEWER APPLICATION ================= */
 
 .reviewer-box{
@@ -168,6 +215,7 @@ nav a:hover{
     transform:translateY(-2px);
 }
 
+
 footer{
     background:#172554;
     color:white;
@@ -184,6 +232,16 @@ footer p{
 footer strong{
     font-size:17px;
 }
+
+
+@media(max-width:900px){
+
+    .process-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
 
 @media(max-width:700px){
 
@@ -247,10 +305,19 @@ footer strong{
         padding:11px 20px;
     }
 
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-step{
+        padding:18px 15px;
+    }
+
     footer{
         padding:20px 12px;
         font-size:14px;
     }
+
 }
 </style>
 </head>
@@ -334,6 +401,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 1 ================= -->
+
 <div class="content-box">
 
 <h2>1. Peer Review Policy</h2>
@@ -354,6 +423,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 2 ================= -->
+
 <div class="content-box">
 
 <h2>2. மதிப்பாய்வின் நோக்கம்</h2>
@@ -368,51 +439,124 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 3 ================= -->
+
 <div class="content-box">
 
 <h2>3. மதிப்பாய்வு செயல்முறை</h2>
 
 <p>
-ஆய்வுக் கட்டுரை சமர்ப்பிக்கப்பட்ட பிறகு பின்வரும்
-நிலைகளின் அடிப்படையில் பரிசீலிக்கப்படும்:
+ஆய்வுக் கட்டுரை சமர்ப்பிக்கப்பட்ட பிறகு,
+ஆசிரியருக்கு புரியும் வகையில் பின்வரும் படிநிலைகளின்
+அடிப்படையில் கட்டுரை பரிசீலிக்கப்படும்:
 </p>
 
-<ul>
 
-<li>
-<strong>ஆரம்ப ஆசிரியர் குழு பரிசீலனை:</strong>
-கட்டுரை இதழின் நோக்கம் மற்றும் ஆய்வுத் துறைகளுடன்
-பொருந்துகிறதா என்பது முதலில் பரிசீலிக்கப்படும்.
-</li>
+<div class="process-grid">
 
-<li>
-<strong>ஆய்வியல் தரச் சரிபார்ப்பு:</strong>
-கட்டுரையின் அடிப்படை ஆய்வியல் தரம் மற்றும்
-ஆய்வியல் நேர்மை பரிசீலிக்கப்படும்.
-</li>
 
-<li>
-<strong>துறைசார் மதிப்பாய்வு:</strong>
-கட்டுரை தொடர்புடைய துறையில் அனுபவமுள்ள
-மதிப்பாய்வாளர்களிடம் அனுப்பப்படலாம்.
-</li>
+    <div class="process-step">
 
-<li>
-<strong>மதிப்பாய்வாளர் கருத்துகள்:</strong>
-கட்டுரையின் பலம், குறைபாடுகள் மற்றும் தேவையான
-திருத்தங்கள் குறித்து கருத்துகள் பெறப்படும்.
-</li>
+        <div class="step-number">1</div>
 
-<li>
-<strong>ஆசிரியர் குழு முடிவு:</strong>
-மதிப்பாய்வாளர் கருத்துகள் மற்றும் ஆசிரியர் குழுவின்
-பரிசீலனையின் அடிப்படையில் இறுதி முடிவு மேற்கொள்ளப்படும்.
-</li>
+        <h3>Submit Article</h3>
 
-</ul>
+        <p>
+            ஆசிரியர் ஆய்வுக் கட்டுரையை
+            இதழுக்கு சமர்ப்பிக்கிறார்.
+        </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+        <div class="step-number">2</div>
+
+        <h3>Editorial Screening</h3>
+
+        <p>
+            கட்டுரையின் பொருத்தம், அடிப்படைத் தரம்
+            மற்றும் வழிகாட்டுதல்கள் பரிசீலிக்கப்படும்.
+        </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+        <div class="step-number">3</div>
+
+        <h3>Peer Review</h3>
+
+        <p>
+            பொருத்தமான துறைசார் மதிப்பாய்வாளர்களிடம்
+            கட்டுரை அனுப்பப்படலாம்.
+        </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+        <div class="step-number">4</div>
+
+        <h3>Revision</h3>
+
+        <p>
+            தேவையான திருத்தங்கள் இருந்தால்,
+            ஆசிரியரிடம் திருத்தப்பட்ட கட்டுரை கோரப்படும்.
+        </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+        <div class="step-number">5</div>
+
+        <h3>Final Decision</h3>
+
+        <p>
+            மதிப்பாய்வாளர் கருத்துகள் மற்றும்
+            ஆசிரியர் குழுவின் பரிசீலனையின் அடிப்படையில்
+            முடிவு எடுக்கப்படும்.
+        </p>
+
+    </div>
+
+
+    <div class="process-step">
+
+        <div class="step-number">6</div>
+
+        <h3>Publication</h3>
+
+        <p>
+            வெளியீட்டிற்கு ஏற்றுக்கொள்ளப்பட்ட கட்டுரை
+            உரிய இதழில் வெளியிடப்படும்.
+        </p>
+
+    </div>
+
 
 </div>
 
+
+<div class="highlight">
+
+<strong>Author Information:</strong>
+
+கட்டுரையின் நிலை மற்றும் தேவையான அடுத்தடுத்த
+நடவடிக்கைகள் குறித்து ஆசிரியருக்கு உரிய முறையில்
+தகவல் தெரிவிக்கப்படும்.
+
+</div>
+
+</div>
+
+
+<!-- ================= SECTION 4 ================= -->
 
 <div class="content-box">
 
@@ -431,6 +575,8 @@ footer strong{
 
 </div>
 
+
+<!-- ================= SECTION 5 ================= -->
 
 <div class="content-box">
 
@@ -468,6 +614,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 6 ================= -->
+
 <div class="content-box">
 
 <h2>6. மதிப்பாய்வின் முடிவுகள்</h2>
@@ -492,6 +640,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 7 ================= -->
+
 <div class="content-box">
 
 <h2>7. மதிப்பாய்வாளர்களின் பொறுப்புகள்</h2>
@@ -513,6 +663,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 8 ================= -->
+
 <div class="content-box">
 
 <h2>8. Confidentiality – ரகசியத்தன்மை</h2>
@@ -531,6 +683,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 9 ================= -->
+
 <div class="content-box">
 
 <h2>9. Conflict of Interest</h2>
@@ -543,6 +697,8 @@ footer strong{
 
 </div>
 
+
+<!-- ================= SECTION 10 ================= -->
 
 <div class="content-box">
 
@@ -563,6 +719,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 11 ================= -->
+
 <div class="content-box">
 
 <h2>11. திருத்தப்பட்ட கட்டுரையின் மறுமதிப்பாய்வு</h2>
@@ -576,6 +734,8 @@ footer strong{
 
 </div>
 
+
+<!-- ================= SECTION 12 ================= -->
 
 <div class="content-box">
 
@@ -598,6 +758,8 @@ footer strong{
 </div>
 
 
+<!-- ================= SECTION 13 ================= -->
+
 <div class="content-box">
 
 <h2>13. மதிப்பாய்வு காலம்</h2>
@@ -615,6 +777,8 @@ footer strong{
 
 </div>
 
+
+<!-- ================= SECTION 14 ================= -->
 
 <div class="content-box">
 
